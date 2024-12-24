@@ -10,7 +10,8 @@
             <div class="header-top-wrapper">
                 <div class="header-top-left-side">
                     <ul>
-                        <li>Hi <a class="underline-link" href="#">Sign In</a> Or <a class="underline-link" href="#">Sign Up</a></li>
+                        <li>Hi <a class="underline-link" href="#">Sign In</a> Or <a class="underline-link" href="#">Sign
+                                Up</a></li>
                         <li><a href="#">Daily Deals</a></li>
                         <li><a href="#">Help & Contact</a></li>
                     </ul>
@@ -32,18 +33,38 @@
             <div class="header-bottom-wrapper">
                 <div class="header-bottom-logo">
                     <a href="#">
-                        <img src="images/ebay-logo.svg" height="60" alt="">
+                        <img src="images/ebay-logo.svg" alt="Ebay">
                     </a>
                 </div>
+
+
                 <div class="header-bottom-search-block">
-                    <div class="header-bottom-search-input">
-                        <i class='bx bx-search-alt-2'></i> <input type="text">
+
+                    <div class="header-bottom-search-input-filter">
+
+                        <div class="header-bottom-search-icon">
+                            <i class='bx bx-search-alt-2'></i>
+                        </div>
+
+                        <div class="header-bottom-search-input">
+                            <input type="text" placeholder="Search For Everything">
+                        </div>
+
+                        <div class="header-bottom-search-filter">
+                            <span>All Category</span>
+                            <span><i class='bx bx-chevron-down'></i></span>
+                        </div>
+
                     </div>
-                    <div class="header-bottom-search-btn">
-                        search
+
+
+                    <div class="header-bottom-search-button">
+                        <button>
+                            Search
+                        </button>
                     </div>
+
                 </div>
-                <div class="hidden-block"></div>
             </div>
         </div>
     </div>
