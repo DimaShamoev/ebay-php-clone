@@ -13,3 +13,39 @@ body {
     max-width: 100%;
     margin: auto;
 }
+
+.body-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+}
+
+.main-wrapper {
+    padding: 0 60px;
+}
+
+.main-page-navigation {
+    padding: 5px 0;
+}
+
+.main-page-navigation ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.main-page-navigation ul li a {
+    color: black;
+    font-size: 13px;
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+        color: #0654BA;
+    }
+}

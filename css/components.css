@@ -1,3 +1,9 @@
+.container {
+    width: 1550px;
+    max-width: 100%;
+    margin: auto;
+}
+
 /* Header */
 .header {
     font-family:"Market Sans", Arial, sans-serif;
