@@ -47,6 +47,7 @@
 .header-bottom {
     border-top: 1px solid #E5E5E5;
     border-bottom: 1px solid #E5E5E5;
+    padding: 10px 0;
 }
 
 .header-bottom-wrapper {
@@ -84,6 +85,10 @@
     outline: none;
     padding: 0 3px 0 35px;
     font-size: 18px;
+
+    &::placeholder {
+        font-size: 16px;
+    }
 }
 
 .search-input-filter {
@@ -108,4 +113,91 @@
     background-color: #3665F3;
     color: white;
     font-size: 18px;
+}
+
+/* Footer */
+.footer {
+    border-top: solid 1px #CCCCCC;
+    background-color: #F7F7F7;
+}
+
+.footer-wrapper {
+    padding: 30px 60px;
+}
+
+
+/* Footer Column */
+.footer-column-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 200px;
+    max-width: 100%;
+}
+
+.footer-column ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.footer-column ul li {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    font-size: 18px;
+    color: #767676;
+}
+
+.footer-column ul li a {
+    color: #767676;
+    text-decoration: none;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    gap: 3px;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.footer-column ul li:first-child, 
+.footer-column ul li:first-child a {
+    font-size: 13px;
+    font-weight: 700;
+    color: black;
+}
+
+.footer-column ul li a i {
+    font-size: 18px;
+}
+
+/* Footer secondary links */
+.footer-secondary-links {
+    margin: 20px 0;
+    display: none;
+}
+
+.footer-secondary-links ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    gap: 25px;
+}
+
+.footer-secondary-links ul li a {
+    color: #767676;
+    font-size: 13px;
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
 }

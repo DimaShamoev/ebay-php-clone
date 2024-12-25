@@ -7,6 +7,19 @@
     <title>MyEbay</title>
 </head>
 <body>
-    <?php include "./components/Header.php"?>
+    <?php
+        include "./components/Header.php"
+    ?>
+
+    <br>
+    <br>
+    <br>
+
+
+    <?php
+        include "./components/Footer.php"
+    ?>
+
+
 </body>
 </html>
