@@ -39,6 +39,18 @@
                         </ul>
                     </div>
 
+                    <div class="main-page-banner">
+                        <div class="main-page-banner-title">
+                            You don't run with the crowd
+                        </div>
+                        <div class="main-page-banner-text">
+                            Get fit your own way with health and wellness gear on eBay.
+                        </div>
+                        <div class="main-page-banner-text">
+                            <a href="#">Shop For Your Style</a>
+                        </div>
+                    </div>
+
                 </div>
 
             </div>
