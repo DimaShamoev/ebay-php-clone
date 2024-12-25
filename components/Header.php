@@ -31,40 +31,29 @@
     <div class="header-bottom">
         <div class="container">
             <div class="header-bottom-wrapper">
+
                 <div class="header-bottom-logo">
                     <a href="#">
-                        <img src="images/ebay-logo.svg" alt="Ebay">
+                        <img height="50" src="images/ebay-logo.svg" alt="Ebay">
                     </a>
                 </div>
 
-
-                <div class="header-bottom-search-block">
-
-                    <div class="header-bottom-search-input-filter">
-
-                        <div class="header-bottom-search-icon">
-                            <i class='bx bx-search-alt-2'></i>
-                        </div>
-
-                        <div class="header-bottom-search-input">
-                            <input type="text" placeholder="Search For Everything">
-                        </div>
-
-                        <div class="header-bottom-search-filter">
-                            <span>All Category</span>
-                            <span><i class='bx bx-chevron-down'></i></span>
-                        </div>
-
+                <div class="header-bottom-search-input-block">
+                    <div class="search-input-icon">
+                        <i class='bx bx-search-alt-2' ></i>
                     </div>
-
-
-                    <div class="header-bottom-search-button">
-                        <button>
-                            Search
-                        </button>
+                    <div class="search-input">
+                        <input type="text" placeholder="Search For Everything">
                     </div>
-
+                    <div class="search-input-filter">
+                        <span>All Categories</span> <i class='bx bx-chevron-down'></i>
+                    </div>
                 </div>
+
+                <div class="header-bottom-search-button">
+                    <button>Search</button>
+                </div>
+
             </div>
         </div>
     </div>
