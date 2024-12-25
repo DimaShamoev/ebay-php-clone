@@ -122,7 +122,7 @@
 }
 
 .footer-wrapper {
-    padding: 30px 60px;
+    padding: 60px 60px 30px 60px;
 }
 
 
@@ -199,5 +199,39 @@
 
     &:hover {
         text-decoration: underline;
+    }
+}
+
+.footer-extra-info {
+    margin: 50px 0 0 0;
+    font-size: 11px;
+    display: flex;
+    gap: 10px;
+}
+
+
+.footer-extra-info ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.footer-extra-info ul li a {
+    color: #767676;
+    display: flex;
+    align-items: center;
+    gap: 3px;
+}
+
+
+
+@media screen and (max-width: 850px) {
+    .footer-column-wrapper {
+        display: none;
+    }
+
+    .footer-secondary-links {
+        display: initial;
     }
 }

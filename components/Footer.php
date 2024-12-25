@@ -85,12 +85,25 @@
             </div>
 
             <div class="footer-extra-info">
-                <p>
-                    Copyright © 1995-2024 eBay Inc. All Rights Reserved. <a href="#">Accessibility</a>, <a href="#">User Agreement</a>, <a href="#">Privacy</a>, <a href="#">Consumer Health Data</a>, <a href="#">Payments Terms of Use</a>, <a href="#">Cookies</a>, <a href="#">CA Privacy Notice</a>, <a href="#">Your Privacy Choices</a> and <a href="#">AdChoice</a>
-                </p>
+                <ul>
+
+                    <li>Copyright © 1995-2024 eBay Inc. All Rights Reserved.</li>
+                    <li><a href="#">Accessibility</a></li>
+                    <li><a href="#">User Agreement</a></li>
+                    <li><a href="#">Privacy</a></li>
+                    <li><a href="#">Consumer Health Data</a></li>
+                    <li><a href="#">Payments Terms of Use</a></li>
+                    <li><a href="#">Cookies</a></li>
+                    <li><a href="#">CA Privacy Notice</a></li>
+                    <li><a href="#">Your Privacy Choices <img src="images/privacy-icon.svg" height="10" alt=""> </a></li>
+                    <li>and</li>
+                    <li><a href="#">AdChoice</a></li>
+
+                </ul>
+                
             </div>
 
-            <img src="images/privacy-icon.svg" height="10" alt="">
+            
         </div>
 
 
