@@ -1,9 +1,6 @@
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="css/components.css">
-</head>
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+<link rel="stylesheet" href="css/components.css">
+
 <header class="header">
     <div class="header-top">
         <div class="container">
@@ -45,7 +42,12 @@
                         <input type="text" placeholder="Search For Everything">
                     </div>
                     <div class="search-input-filter">
-                        <span>All Categories</span> <i class='bx bx-chevron-down'></i>
+                        <div class="category-block">
+                            <span>All Categories</span> <i class='bx bx-chevron-down'></i>
+                        </div>
+                        <div class="search-btn-block">
+                            <i class='bx bx-search-alt-2'></i>
+                        </div>
                     </div>
                 </div>
 
