@@ -263,6 +263,11 @@
 
 
 @media screen and (max-width: 850px) {
+    
+    .header-top-wrapper {
+        padding: 5px 10px;
+    }
+
     .header-bottom-wrapper {
         padding: 5px 10px;
     }
@@ -290,9 +295,21 @@
     }
 }
 
+@media screen and (max-width: 700px) {
+    .header-top-left-side-hidden-link {
+        display: none;
+    }
+}
+
 @media screen and (max-width: 600px) {
     .header-bottom-search-input-block {
         grid-template-columns: 80% 20%;
+    }
+}
+
+@media screen and (max-width: 470px) {
+    .header-top-right-side-hidden-link {
+        display: none;
     }
 }
 

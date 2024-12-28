@@ -7,16 +7,16 @@
             <div class="header-top-wrapper">
                 <div class="header-top-left-side">
                     <ul>
-                        <li>Hi <a class="underline-link" href="#">Sign In</a> Or <a class="underline-link" href="#">Sign Up</a></li>
-                        <li><a href="#">Daily Deals</a></li>
-                        <li><a href="#">Help & Contact</a></li>
+                        <li><a class="underline-link" href="#">Sign In</a> Or <a class="underline-link" href="#">Sign Up</a></li>
+                        <li class="header-top-left-side-hidden-link"><a href="#">Daily Deals</a></li>
+                        <li class="header-top-left-side-hidden-link"><a href="#">Help & Contact</a></li>
                     </ul>
                 </div>
                 <div class="header-top-right-side">
                     <ul>
-                        <li><a href="#">Sell</a></li>
-                        <li><a href="#">Watchlist <i class='bx bx-chevron-down'></i></a></li>
-                        <li><a href="#">My eBay <i class='bx bx-chevron-down'></i></a></li>
+                        <li class="header-top-right-side-hidden-link"><a href="#">Sell</a></li>
+                        <li class="header-top-right-side-hidden-link"><a href="#">Watchlist <i class='bx bx-chevron-down'></i></a></li>
+                        <li class="header-top-right-side-hidden-link"><a href="#">My eBay <i class='bx bx-chevron-down'></i></a></li>
                         <li><a href="#"><i class='bx bx-bell'></i></a></li>
                         <li><a href="#"><i class='bx bx-cart'></i></a></li>
                     </ul>

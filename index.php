@@ -55,6 +55,12 @@
                         <div class="popular-categories-title">
                             <h4>Explore Popular Categories</h4>
                         </div>
+                        <div class="popular-categories-navigation">
+                            <!-- Previous button -->
+                            <button class="prev-btn slide-btn"><i class='bx bx-chevron-left'></i></button>
+                            <!-- Next button -->
+                            <button class="next-btn slide-btn"><i class='bx bx-chevron-right'></i></button>
+                        </div>
                         <div class="popular-categories-type">
                             <div class="popular-category popular-category-1">
                                 <div class="popular-category-img">
@@ -158,5 +164,6 @@
     </div>
 
 
+    <script src="./js/index.js"></script>
 </body>
 </html>

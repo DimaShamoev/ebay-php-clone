@@ -34,7 +34,22 @@ main {
 
 /* Page Inner Navigation  */
 .main-page-navigation {
-    padding: 5px 0;
+    padding: 5px 2px;
+    overflow: auto;
+
+    &::-webkit-scrollbar {
+        height: 2px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: #d4d4d4;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: #000000;
+        border-radius: 10px;
+        border: 1px solid #000000;
+    }
 }
 
 .main-page-navigation ul {
@@ -42,6 +57,9 @@ main {
     display: flex;
     justify-content: center;
     gap: 30px;
+    width: max-content;
+    margin: auto;
+    padding: 0 2px;
 }
 
 .main-page-navigation ul li a {
@@ -99,10 +117,45 @@ main {
 
 /* Popular Products */
 .popular-categories-block {
+    position: relative;
     margin: 50px 0 0 0;
     display: flex;
     flex-direction: column;
     gap: 20px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.slide-btn {
+    position: absolute;
+    background-color: white;
+    top: 55%;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    border: solid 2px #E2E2E2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 23px;
+    cursor: pointer;
+    opacity: 0.9;
+    transition: 0.2s;
+    z-index: 1;
+
+    &:hover {
+        background-color: #E2E2E2;
+
+    }
+}
+
+.prev-btn {
+    left: 10px;
+}
+
+.next-btn {
+    right: 10px;
 }
 
 .popular-categories-title {
@@ -112,6 +165,7 @@ main {
 .popular-categories-type {
     display: flex;
     gap: 20px;
+    transition: transform 0.5s ease-out;
 }
 
 .popular-category {
@@ -121,13 +175,16 @@ main {
     overflow: hidden;
     gap: 10px;
     cursor: pointer;
+    min-width: 215px;
+    min-height: 220px;
 }
 
 .popular-category-img {
     width: 200px;
     max-width: 100%;
-    border-radius: 50%;
+    border-radius: 50%;   
 }
+
 
 .popular-category-img img {
     width: 100%;
@@ -143,9 +200,37 @@ main {
 /* get fit banner */
 .get-fit-banner {
     background-image: url("../images/get-fit-banner.webp");
+    color: white;
 }
 
 /* discover banner */
 .discover-banner {
     background-image: url("../images/discover-banner.webp");
+    color: white;
+}
+
+
+@media screen and (max-width: 1550px) {
+    
+}
+
+@media screen and (max-width: 850px) {
+    .main-wrapper {
+        padding: 20px 10px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .banner-block {
+        height: 260px;
+        padding: 20px;
+    }
+
+    .banner-title {
+        font-size: 22px;
+    }
+
+    .banner-text {
+        font-size: 16px;
+    }
 }
