@@ -7,6 +7,8 @@
     <link rel="icon" type="png" href="../images/ebay.png">
     <link rel="stylesheet" href="../css/sign_in.css">
     <link rel="stylesheet" href="../css/components.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="../css/components.css">
     <title>Ebay Sign In</title>
 </head>
 
@@ -40,10 +42,13 @@
                 </div>
                 <div class="authorization-inputs-block">
                     <div class="input-block">
-                        <input type="text">
+                        <input type="text" placeholder="Enter Email or Username">
                     </div>
                     <div class="input-block">
-                        <input type="text">
+                        <input type="text" placeholder="Enter Password">
+                    </div>
+                    <div class="submit-btn">
+                        <button type="submit">Submit</button>
                     </div>
                 </div>
 
@@ -53,13 +58,13 @@
 
                 <div class="authorization-methods">
                     <div class="auth-method">
-                        <i class='bx bxl-google'></i> Continue With Google
+                        <span class="auth-method-logo"><i class='bx bxl-google'></i></span> Continue With Google
                     </div>
                     <div class="auth-method">
-                        <i class='bx bxl-google'></i> Continue With Google
+                        <span class="auth-method-logo"><i class='bx bxl-facebook-circle'></i></span> Continue With Google
                     </div>
                     <div class="auth-method">
-                        <i class='bx bxl-google'></i> Continue With Google
+                        <span class="auth-method-logo"><i class='bx bxl-apple'></i></span> Continue With Google
                     </div>
                 </div>
 

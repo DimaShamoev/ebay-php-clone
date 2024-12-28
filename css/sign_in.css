@@ -36,9 +36,133 @@ body {
     justify-content: space-between;
 }
 
-main {
+.main {
     flex: 1;
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 50px 0;
+}
+
+.main form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 400px;
+    max-width: 100%;
+}
+
+.authorization-form-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.authorization-form-title {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.authorization-form-text {
+    font-size: 14px;
+}
+
+.authorization-form-text a {
+    color: black;
+}
+
+.authorization-inputs-block {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.input-block input {
+    width: 100%;
+    height: 40px;
+    background-color: #F7F7F7;
+    border: solid 2px #8F8F8F;
+    border-radius: 5px;
+    padding: 0 10px;
+
+    &::placeholder {
+        color: black;
+        -webkit-text-stroke-width: 0.3px;
+    }
+}
+
+.submit-btn button {
+    width: 100%;
+    padding: 10px 0;
+    border: none;
+    background-color: #3461E9;
+    border-radius: 30px;
+    color: white;
+    -webkit-text-stroke-width: 0.3px;
+    letter-spacing: 0.5px;
+}
+
+.form-line {
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+}
+
+.form-line::before {
+    content: "";
+    position: absolute;
+    height: 1px;
+    width: 43%;
+    background-color: black;
+    left: 0;
+}
+
+.form-line::after {
+    content: "";
+    position: absolute;
+    height: 1px;
+    width: 43%;
+    background-color: black;
+    right: 0;
+}
+
+.authorization-methods {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.auth-method {
+    width: 100%;
+    border: solid 1px black;
+    padding: 12px 10px 10px 10px;
+    position: relative;
+    cursor: pointer;
+    border-radius: 50px;
+    font-size: 16px;
+    -webkit-text-stroke-width: 0.3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.auth-method-logo {
+    position: absolute;
+    left: 10px;
+    top: 6px;
+    font-size: 30px;
+}
+
+@media screen and (max-width: 510px) {
+    .authorization-header-wrapper {
+        padding: 10px;
+    }
+
+    .main {
+        padding: 50px 10px;
+    }
 }

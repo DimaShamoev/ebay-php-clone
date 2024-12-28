@@ -1,5 +1,4 @@
-<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-<link rel="stylesheet" href="css/components.css">
+
 
     
 <footer class="footer">
@@ -92,7 +91,7 @@
                     <li><a href="#">Payments Terms of Use</a></li>
                     <li><a href="#">Cookies</a></li>
                     <li><a href="#">CA Privacy Notice</a></li>
-                    <li><a href="#">Your Privacy Choices <img src="images/privacy-icon.svg" height="10" alt=""> </a></li>
+                    <li><a href="#">Your Privacy Choices</a></li>
                     <li>and</li>
                     <li><a href="#">AdChoice</a></li>
 
