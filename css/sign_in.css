@@ -1,0 +1,36 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Market Sans", Arial, sans-serif;
+}
+
+.container {
+    width: 1550px;
+    max-width: 100%;
+    margin: auto;
+}
+
+.body-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.authorization-header {
+    border-bottom: solid 2px #D3D3D3;
+}
+
+.authorization-header-wrapper {
+    padding: 10px 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+main {
+    flex: 1;
+}

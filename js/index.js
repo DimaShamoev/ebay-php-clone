@@ -2,8 +2,8 @@ let slideTrack = document.querySelector(".popular-categories-type");
 let nextBtn = document.querySelector(".next-btn");
 let prevBtn = document.querySelector(".prev-btn");
 
-let itemWidth = 235; // Adjust the width based on your item size
-let isSliding = false; // Prevent overlapping transitions
+let itemWidth = 235;
+let isSliding = false;
 
 nextBtn.addEventListener("click", () => {
     if (isSliding) return;
@@ -34,6 +34,3 @@ prevBtn.addEventListener("click", () => {
         isSliding = false;
     }, 500);
 });
-
-
-console.log("dd")
