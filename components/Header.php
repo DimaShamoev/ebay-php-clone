@@ -7,7 +7,14 @@
             <div class="header-top-wrapper">
                 <div class="header-top-left-side">
                     <ul>
-                        <li><a class="underline-link" href="./pages/sign_in.php">Sign In</a> Or <a class="underline-link" href="./pages/sign_up.php">Sign Up</a></li>
+                        <?php
+                            if(isset($_GET['username'])) {
+                                $username = $_GET['username'];
+                        ?>
+                            <li>Hello <b><?=$username?></b></li>
+                        <?php } else { ?>
+                            <li><a class="underline-link" href="./pages/sign_in.php">Sign In</a> Or <a class="underline-link" href="./pages/sign_up.php">Sign Up</a></li>
+                        <?php } ?>
                         <li class="header-top-left-side-hidden-link"><a href="#">Daily Deals</a></li>
                         <li class="header-top-left-side-hidden-link"><a href="#">Help & Contact</a></li>
                     </ul>

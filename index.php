@@ -152,9 +152,7 @@
                             <a href="#">Shop For Your Style</a>
                         </div>
                     </div>
-
                 </div>
-
             </div>
 
         </main>

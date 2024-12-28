@@ -102,6 +102,7 @@ body {
     color: white;
     -webkit-text-stroke-width: 0.3px;
     letter-spacing: 0.5px;
+    cursor: pointer;
 }
 
 .form-line {

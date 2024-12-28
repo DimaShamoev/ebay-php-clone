@@ -1,0 +1,7 @@
+1)user
+2)products
+3)categories
+4)orders
+5)cart
+6)saved
+7)feedback

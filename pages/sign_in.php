@@ -30,7 +30,7 @@
         </header>
 
         <main class="main">
-            <form action="" class="authorization-form">
+            <form method="POST" action="../auth/login.php" class="authorization-form">
 
                 <div class="authorization-form-header">
                     <div class="authorization-form-title">
@@ -42,10 +42,10 @@
                 </div>
                 <div class="authorization-inputs-block">
                     <div class="input-block">
-                        <input type="text" placeholder="Enter Email or Username">
+                        <input type="text" name="username" placeholder="Enter Username">
                     </div>
                     <div class="input-block">
-                        <input type="text" placeholder="Enter Password">
+                        <input type="text" name="password" placeholder="Enter Password">
                     </div>
                     <div class="submit-btn">
                         <button type="submit">Submit</button>
