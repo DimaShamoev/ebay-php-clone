@@ -8,8 +8,8 @@
                 <div class="header-top-left-side">
                     <ul>
                         <?php
-                            if(isset($_GET['username'])) {
-                                $username = $_GET['username'];
+                            if(isset($_COOKIE['username'])) {
+                                $username = $_COOKIE['username'];
                         ?>
                             <li>Hello <b><?=$username?></b></li>
                         <?php } else { ?>

@@ -30,7 +30,7 @@
         </header>
 
         <main class="main">
-            <form action="" class="authorization-form">
+            <form method="POST" action="../auth/register.php" class="authorization-form">
 
                 <div class="authorization-form-header">
                     <div class="authorization-form-title">
@@ -39,17 +39,20 @@
                 </div>
                 <div class="authorization-inputs-block">
                     <div class="input-block user-inputs">
-                        <input type="text" placeholder="First Name">
-                        <input type="text" placeholder="Last Name">
+                        <input name="first_name" type="text" placeholder="First Name">
+                        <input name="last_name" type="text" placeholder="Last Name">
                     </div>
                     <div class="input-block">
-                        <input type="text" placeholder="Enter Email or Username">
+                        <input name="username" type="text" placeholder="Enter Username">
                     </div>
                     <div class="input-block">
-                        <input type="text" placeholder="Enter Password">
+                        <input name="email" type="text" placeholder="Enter Email">
                     </div>
                     <div class="input-block">
-                        <input type="text" placeholder="Re-Enter Password">
+                        <input name="password" type="text" placeholder="Enter Password">
+                    </div>
+                    <div class="input-block">
+                        <input name="password" type="text" placeholder="Re-Enter Password">
                     </div>
                     <div class="submit-btn">
                         <button type="submit">Create Account</button>
