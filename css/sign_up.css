@@ -55,17 +55,13 @@ body {
 .authorization-form-header {
     display: flex;
     flex-direction: column;
-    align-items: center;
     gap: 10px;
 }
 
 .authorization-form-title {
     font-size: 30px;
     font-weight: 600;
-}
-
-.authorization-form-text {
-    font-size: 14px;
+    text-align: left;
 }
 
 .authorization-form-text a {
@@ -75,6 +71,11 @@ body {
 .authorization-inputs-block {
     display: flex;
     flex-direction: column;
+    gap: 20px;
+}
+
+.input-block {
+    display: flex;
     gap: 20px;
 }
 
