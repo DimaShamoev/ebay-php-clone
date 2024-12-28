@@ -24,6 +24,11 @@ body {
     border-bottom: solid 2px #D3D3D3;
 }
 
+.authorization-report a {
+    color: #0654BA;
+    font-size: 14px;
+}
+
 .authorization-header-wrapper {
     padding: 10px 60px;
     display: flex;
@@ -33,4 +38,7 @@ body {
 
 main {
     flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

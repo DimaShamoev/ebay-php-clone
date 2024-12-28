@@ -28,7 +28,42 @@
         </header>
 
         <main class="main">
-            
+            <form action="" class="authorization-form">
+
+                <div class="authorization-form-header">
+                    <div class="authorization-form-title">
+                        Sign in to your account
+                    </div>
+                    <div class="authorization-form-text">
+                        New to eBay? <a href="#">Create account</a>
+                    </div>
+                </div>
+                <div class="authorization-inputs-block">
+                    <div class="input-block">
+                        <input type="text">
+                    </div>
+                    <div class="input-block">
+                        <input type="text">
+                    </div>
+                </div>
+
+                <div class="form-line">
+                    OR
+                </div>
+
+                <div class="authorization-methods">
+                    <div class="auth-method">
+                        <i class='bx bxl-google'></i> Continue With Google
+                    </div>
+                    <div class="auth-method">
+                        <i class='bx bxl-google'></i> Continue With Google
+                    </div>
+                    <div class="auth-method">
+                        <i class='bx bxl-google'></i> Continue With Google
+                    </div>
+                </div>
+
+            </form>
         </main>
 
         <?php
