@@ -150,6 +150,12 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: 0.2s;
+
+    &:hover {
+        background-color: black;
+        color: white;
+    }
 }
 
 .auth-method-logo {
