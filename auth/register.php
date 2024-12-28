@@ -22,7 +22,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if ($result->num_rows == 0) {
         $insertQuery = "INSERT INTO users (user_username, user_email, user_password) VALUES ('$username', '$email', '$password')";
         if ($conn->query($insertQuery) === TRUE) {
-            setcookie("username", $username, time() + (86400 * 30), "/"); // Set cookie for 30 days
+            setcookie("username", $username, time() + (86400 * 30), "/");
             header("Location: ../index.php");
         } else {
             echo "Error: " . $conn->error;
