@@ -7,7 +7,6 @@
 .line {
     width: 100%;
     border: solid 1px rgba(211, 211, 211, 0.5);
-    margin: 20px 0;
 }
 
 body {
@@ -15,9 +14,83 @@ body {
 }
 
 .body-wrapper {
+    position: relative;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+}
+
+.overlay {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.393);
+    z-index: 1;
+    display: none;
+    transition: 0.5s;
+}
+
+.overlay.active {
+    display: initial;
+}
+
+.aside {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: -320px;
+    width: 320px;
+    max-width: 100%;
+    min-height: 100vh;
+    background-color: white;
+    z-index: 2;
+    overflow: auto;
+    padding: 10px 10px 30px 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    transition: .5s ease-in-out;
+
+    &::-webkit-scrollbar {
+        width: 0px;
+    }
+}
+
+.aside.active {
+    right: 0;
+}
+
+.exit-btn {
+    text-align: right;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.aside-menu-list {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.aside-menu-list ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.aside-menu-list ul li p {
+    font-size: 17px;
+    -webkit-text-stroke-width: 0.3px;
+}
+
+.aside-menu-list ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+
+    &:hover {
+        text-decoration: underline;
+    }
 }
 
 .container {
@@ -31,10 +104,30 @@ body {
 }
 
 .main-wrapper {
-    padding: 20px 60px;
+    padding: 20px 60px 60px 60px;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 0px;
+}
+
+.filter-menu-btn {
+    justify-content: end;
+    margin-bottom: 10px;
+    display: none;
+}
+
+.filter-btn {
+    border: solid 1px black;
+    padding: 5px 20px;
+    font-size: 18px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 0.2s;
+
+    &:hover {
+        background-color: black;
+        color: white;
+    }
 }
 
 .main-top-banner {
@@ -46,6 +139,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 10px;
+    margin-bottom: 40px;
 }
 
 .main-top-banner-title {
@@ -74,7 +168,7 @@ body {
     list-style: none;
     display: flex;
     flex-direction: column;
-    gap: 4px;
+    gap: 7px;
 }
 
 .shop-list-side ul li p {
@@ -102,7 +196,7 @@ body {
 .shop-content-side {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 40px;
 }
 
 .shop-content-side-event-blocks {
@@ -168,4 +262,69 @@ body {
     text-align: center;
     color: black;
     font-size: 13px;
+}
+
+.consoles-block {
+    display: flex;
+    gap: 30px;
+}
+
+.console-block a img {
+    width: 100%;
+    height: auto;
+}
+
+.offers-block {
+    display: flex;
+    gap: 30px;
+}
+
+.offer-block a img {
+    width: 100%;
+    height: auto;
+}
+
+@media screen and (max-width: 900px) {
+    .filter-menu-btn {
+        display: flex;
+    }
+
+    .main-shop-content {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    
+    .shop-list-side {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .main-wrapper {
+        padding: 10px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .shop-content-side-event-blocks {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .shop-categories {
+        flex-direction: column;
+    }
+
+    .shop-brands {
+        grid-template-columns: repeat(2, auto);
+    }
+
+    .consoles-block {
+        flex-direction: column;
+    }
+
+    .offers-block {
+        flex-direction: column;
+    }
 }
