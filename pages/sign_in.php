@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="../css/sign_in.css">
     <link rel="stylesheet" href="../css/components.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="../css/components.css">
     <title>Ebay Sign In</title>
 </head>
 

@@ -11,9 +11,9 @@
                             if(isset($_COOKIE['username'])) {
                                 $username = $_COOKIE['username'];
                         ?>
-                            <li>Hello <b><?=$username?></b></li>
+                            <li>Hello <b><?=$username?></b> | <a href="/ebay-php-clone/auth/log_out.php">Log Out</a></li>
                         <?php } else { ?>
-                            <li><a class="underline-link" href="./pages/sign_in.php">Sign In</a> Or <a class="underline-link" href="./pages/sign_up.php">Sign Up</a></li>
+                            <li><a class="underline-link" href="/ebay-php-clone/pages/sign_in.php">Sign In</a> Or <a class="underline-link" href="/ebay-php-clone/pages/sign_up.php">Sign Up</a></li>
                         <?php } ?>
                         <li class="header-top-left-side-hidden-link"><a href="#">Daily Deals</a></li>
                         <li class="header-top-left-side-hidden-link"><a href="#">Help & Contact</a></li>
@@ -37,7 +37,8 @@
 
                 <div class="header-bottom-logo">
                     <a href="#">
-                        <img height="50" src="images/ebay-logo.svg" alt="Ebay">
+                        <!-- <img height="50" src="images/ebay-logo.svg" alt="Ebay"> -->
+                        <img height="50" src="https://pngimg.com/uploads/ebay/ebay_PNG14.png" alt="Ebay">
                     </a>
                 </div>
 

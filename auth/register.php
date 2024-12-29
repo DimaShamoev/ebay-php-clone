@@ -20,7 +20,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $result = $conn->query($query);
 
     if ($result->num_rows == 0) {
-        $insertQuery = "INSERT INTO users (user_username, user_email, user_password) VALUES ('$username', '$email', '$password')";
+        $insertQuery = "INSERT INTO users (user_username, user_email, user_password, user_type) VALUES ('$username', '$email', '$password', 'user')";
         if ($conn->query($insertQuery) === TRUE) {
             setcookie("username", $username, time() + (86400 * 30), "/");
             header("Location: ../index.php");

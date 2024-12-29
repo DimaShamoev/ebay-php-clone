@@ -28,7 +28,7 @@
                         <ul>
                             <li><a href="#">Explore (New!)</a></li>
                             <li><a href="#">Saved</a></li>
-                            <li><a href="#">Electronics</a></li>
+                            <li><a href="/ebay-php-clone/pages/electronics.php">Electronics</a></li>
                             <li><a href="#">Motors</a></li>
                             <li><a href="#">Fashion</a></li>
                             <li><a href="#">Collectibles and Art</a></li>
@@ -167,3 +167,10 @@
     <script src="./js/index.js"></script>
 </body>
 </html>
+
+<!-- 
+
+To do:
+1)users type after authorization
+
+ -->
