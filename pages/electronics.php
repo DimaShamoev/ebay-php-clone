@@ -86,8 +86,94 @@
                                     <img width="100%" src="/ebay-php-clone/images/electronics-content-banner1.webp" alt="">
                                 </a>
                             </div>
-                        </div>
 
+                            <div class="shop-content-side-event-blocks">
+                                <div class="shop-content-side-event-block">
+                                    <a href="#">
+                                        <img src="/ebay-php-clone/images/electronics-event-banner-1.webp" alt="">
+                                    </a>
+                                </div>
+
+                                <div class="shop-content-side-event-block">
+                                    <a href="#">
+                                        <img src="/ebay-php-clone/images/electronics-event-banner-2.webp" alt="">
+                                    </a>
+                                </div>
+
+                                <div class="shop-content-side-event-block">
+                                    <a href="#">
+                                        <img src="/ebay-php-clone/images/electronics-event-banner-3.webp" alt="">
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="shop-by-category-block">
+
+                                <div class="shop-by-category-title">
+                                    Shop by Category
+                                </div>
+
+                                <div class="shop-categories">
+                                    <div class="category-block">
+                                        <a href="#">
+                                            <div class="category-img">
+                                                <img src="/ebay-php-clone/images/shop-by-category-1.webp" alt="">
+                                            </div>
+                                            <div class="category-name">
+                                                TV, Video & Home Audio Electronics
+                                            </div>
+                                        </a>
+                                    </div>
+
+                                    <div class="category-block">
+                                        <a href="#">
+                                            <div class="category-img">
+                                                <img src="/ebay-php-clone/images/shop-by-category-2.webp" alt="">
+                                            </div>
+                                            <div class="category-name">
+                                                TV, Video & Home Audio Electronics
+                                            </div>
+                                        </a>
+                                    </div>
+
+                                    <div class="category-block">
+                                        <a href="#">
+                                            <div class="category-img">
+                                                <img src="/ebay-php-clone/images/shop-by-category-3.webp" alt="">
+                                            </div>
+                                            <div class="category-name">
+                                                TV, Video & Home Audio Electronics
+                                            </div>
+                                        </a>
+                                    </div>
+
+                                    <div class="category-block">
+                                        <a href="#">
+                                            <div class="category-img">
+                                                <img src="/ebay-php-clone/images/shop-by-category-4.webp" alt="">
+                                            </div>
+                                            <div class="category-name">
+                                                TV, Video & Home Audio Electronics
+                                            </div>
+                                        </a>
+                                    </div>
+
+                                    <div class="category-block">
+                                        <a href="#">
+                                            <div class="category-img">
+                                                <img src="/ebay-php-clone/images/shop-by-category-5.webp" alt="">
+                                            </div>
+                                            <div class="category-name">
+                                                TV, Video & Home Audio Electronics
+                                            </div>
+                                        </a>
+                                    </div>
+                                    
+                                </div>
+
+                            </div>
+
+                        </div>
                     </div>
                 </div>
 

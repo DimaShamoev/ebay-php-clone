@@ -92,3 +92,47 @@ body {
     margin: 15px 0;
     border: dashed 1px lightgray;
 }
+
+.shop-content-side {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.shop-content-side-event-blocks {
+    display: flex;
+    gap: 25px;
+}
+
+.shop-content-side-event-block img {
+    width: 100%;
+    height: auto;
+}
+
+.shop-by-category-block {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.shop-by-category-title {
+    font-size: 20px;
+    -webkit-text-stroke-width: 0.5px;
+}
+
+.shop-categories {
+    display: flex;
+    gap: 25px;
+}
+
+.category-name {
+    text-align: center;
+    font-size: 13px;
+    color: black;
+    text-decoration: none;
+}
+
+.category-img img {
+    width: 100%;
+    height: auto;
+}
