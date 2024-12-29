@@ -91,7 +91,7 @@
                     <li><a href="#">Payments Terms of Use</a></li>
                     <li><a href="#">Cookies</a></li>
                     <li><a href="#">CA Privacy Notice</a></li>
-                    <li><a href="#">Your Privacy Choices</a></li>
+                    <li><a href="#">Your Privacy Choices <img width="20" src="/ebay-php-clone/images/privacy-icon.svg" alt=""></a></li>
                     <li>and</li>
                     <li><a href="#">AdChoice</a></li>
 

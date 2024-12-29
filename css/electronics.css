@@ -4,6 +4,12 @@
     box-sizing: border-box;
 }
 
+.line {
+    width: 100%;
+    border: solid 1px rgba(211, 211, 211, 0.5);
+    margin: 20px 0;
+}
+
 body {
     font-family: "Market Sans", Arial, sans-serif;
 }
@@ -129,10 +135,37 @@ body {
     text-align: center;
     font-size: 13px;
     color: black;
-    text-decoration: none;
 }
 
 .category-img img {
     width: 100%;
     height: auto;
+}
+
+.shop-by-brands-block {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.shop-by-brands-title {
+    font-size: 20px;
+    -webkit-text-stroke-width: 0.5px;
+}
+
+.shop-brands {
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    gap: 30px;
+}
+
+.brand-img img {
+    width: 100%;
+    height: auto;
+}
+
+.brand-name {
+    text-align: center;
+    color: black;
+    font-size: 13px;
 }

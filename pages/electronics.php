@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,10 +10,11 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <title>Electronics</title>
 </head>
+
 <body>
     <div class="body-wrapper">
 
-        <?php 
+        <?php
             include "../components/Header.php"
         ?>
 
@@ -24,31 +26,17 @@
                     <div class="main-top-banner">
 
                         <div class="main-top-banner-title">Welcome to the world of tech</div>
-                        <div class="main-top-banner-text">Browse all the devices you need, from smartphones to PCs.</div>
+                        <div class="main-top-banner-text">Browse all the devices you need, from smartphones to PCs.
+                        </div>
 
                     </div>
                     <div class="main-shop-content">
 
                         <div class="shop-list-side">
                             <ul>
-                                <li><p>Shop by Category</p></li>
-                                <li><a href="#">Cameras & Photo</a></li>
-                                <li><a href="#">Vehicle Electronics & GPS</a></li>
-                                <li><a href="#">Home Surveillance Systems</a></li>
-                                <li><a href="#">Surveillance & Smart Home Electronics</a></li>
-                                <li><a href="#">Major Appliances, Parts & Accessories</a></li>
-                                <li><a href="#">Video Games & Consoles</a></li>
-                                <li><a href="#">Virtual Reality Headsets, Parts & Accessories</a></li>
-                                <li><a href="#">Cell Phones, Smart Watches & Accessories</a></li>
-                                <li><a href="#">Computers, Tablets & Network Hardware</a></li>
-                                <li><a href="#">TV, Video & Home Audio Electronics</a></li>
-                                <li><a href="#">Portable Audio & Headphones</a></li>
-                            </ul>
-                            
-                            <div class="list-side-line"></div>
-
-                            <ul>
-                                <li><p>Your favorite brands</p></li>
+                                <li>
+                                    <p>Shop by Category</p>
+                                </li>
                                 <li><a href="#">Cameras & Photo</a></li>
                                 <li><a href="#">Vehicle Electronics & GPS</a></li>
                                 <li><a href="#">Home Surveillance Systems</a></li>
@@ -65,7 +53,9 @@
                             <div class="list-side-line"></div>
 
                             <ul>
-                                <li><p>Shop by Interest</p></li>
+                                <li>
+                                    <p>Your favorite brands</p>
+                                </li>
                                 <li><a href="#">Cameras & Photo</a></li>
                                 <li><a href="#">Vehicle Electronics & GPS</a></li>
                                 <li><a href="#">Home Surveillance Systems</a></li>
@@ -78,12 +68,34 @@
                                 <li><a href="#">TV, Video & Home Audio Electronics</a></li>
                                 <li><a href="#">Portable Audio & Headphones</a></li>
                             </ul>
+
+                            <div class="list-side-line"></div>
+
+                            <ul>
+                                <li>
+                                    <p>Shop by Interest</p>
+                                </li>
+                                <li><a href="#">Cameras & Photo</a></li>
+                                <li><a href="#">Vehicle Electronics & GPS</a></li>
+                                <li><a href="#">Home Surveillance Systems</a></li>
+                                <li><a href="#">Surveillance & Smart Home Electronics</a></li>
+                                <li><a href="#">Major Appliances, Parts & Accessories</a></li>
+                                <li><a href="#">Video Games & Consoles</a></li>
+                                <li><a href="#">Virtual Reality Headsets, Parts & Accessories</a></li>
+                                <li><a href="#">Cell Phones, Smart Watches & Accessories</a></li>
+                                <li><a href="#">Computers, Tablets & Network Hardware</a></li>
+                                <li><a href="#">TV, Video & Home Audio Electronics</a></li>
+                                <li><a href="#">Portable Audio & Headphones</a></li>
+                            </ul>
+
+                            <div class="list-side-line"></div>
 
                         </div>
                         <div class="shop-content-side">
                             <div class="shop-content-side-top-banner">
                                 <a href="#">
-                                    <img width="100%" src="/ebay-php-clone/images/electronics-content-banner1.webp" alt="">
+                                    <img width="100%" src="/ebay-php-clone/images/electronics-content-banner1.webp"
+                                        alt="">
                                 </a>
                             </div>
 
@@ -168,10 +180,134 @@
                                             </div>
                                         </a>
                                     </div>
-                                    
+                                </div>
+                            </div>
+
+                            <div class="line"></div>
+
+                            <div class="shop-by-brands-block">
+
+                                <div class="shop-by-brands-title">
+                                    Shop by Brands
+                                </div>
+
+                                <div class="shop-brands">
+
+                                    <div class="brand-block">
+                                        <a href="#">
+                                            <div class="brand-img">
+                                                <img src="/ebay-php-clone/images/shop-by-brands-01.webp" alt="">
+                                            </div>
+                                            <div class="brand-name">
+                                                TV, Video & Home Audio Electronics
+                                            </div>
+                                        </a>
+                                    </div>
+
+                                    <div class="brand-block">
+                                        <a href="#">
+                                            <div class="brand-img">
+                                                <img src="/ebay-php-clone/images/shop-by-brands-02.webp" alt="">
+                                            </div>
+                                            <div class="brand-name">
+                                                TV, Video & Home Audio Electronics
+                                            </div>
+                                        </a>
+                                    </div>
+
+                                    <div class="brand-block">
+                                        <a href="#">
+                                            <div class="brand-img">
+                                                <img src="/ebay-php-clone/images/shop-by-brands-03.webp" alt="">
+                                            </div>
+                                            <div class="brand-name">
+                                                TV, Video & Home Audio Electronics
+                                            </div>
+                                        </a>
+                                    </div>
+
+                                    <div class="brand-block">
+                                        <a href="#">
+                                            <div class="brand-img">
+                                                <img src="/ebay-php-clone/images/shop-by-brands-04.webp" alt="">
+                                            </div>
+                                            <div class="brand-name">
+                                                TV, Video & Home Audio Electronics
+                                            </div>
+                                        </a>
+                                    </div>
+
+                                    <div class="brand-block">
+                                        <a href="#">
+                                            <div class="brand-img">
+                                                <img src="/ebay-php-clone/images/shop-by-brands-05.webp" alt="">
+                                            </div>
+                                            <div class="brand-name">
+                                                TV, Video & Home Audio Electronics
+                                            </div>
+                                        </a>
+                                    </div>
+
+                                    <div class="brand-block">
+                                        <a href="#">
+                                            <div class="brand-img">
+                                                <img src="/ebay-php-clone/images/shop-by-brands-06.webp" alt="">
+                                            </div>
+                                            <div class="brand-name">
+                                                TV, Video & Home Audio Electronics
+                                            </div>
+                                        </a>
+                                    </div>
+
+                                    <div class="brand-block">
+                                        <a href="#">
+                                            <div class="brand-img">
+                                                <img src="/ebay-php-clone/images/shop-by-brands-07.webp" alt="">
+                                            </div>
+                                            <div class="brand-name">
+                                                TV, Video & Home Audio Electronics
+                                            </div>
+                                        </a>
+                                    </div>
+
+                                    <div class="brand-block">
+                                        <a href="#">
+                                            <div class="brand-img">
+                                                <img src="/ebay-php-clone/images/shop-by-brands-08.webp" alt="">
+                                            </div>
+                                            <div class="brand-name">
+                                                TV, Video & Home Audio Electronics
+                                            </div>
+                                        </a>
+                                    </div>
+
+                                    <div class="brand-block">
+                                        <a href="#">
+                                            <div class="brand-img">
+                                                <img src="/ebay-php-clone/images/shop-by-brands-09.webp" alt="">
+                                            </div>
+                                            <div class="brand-name">
+                                                TV, Video & Home Audio Electronics
+                                            </div>
+                                        </a>
+                                    </div>
+
+                                    <div class="brand-block">
+                                        <a href="#">
+                                            <div class="brand-img">
+                                                <img src="/ebay-php-clone/images/shop-by-brands-10.webp" alt="">
+                                            </div>
+                                            <div class="brand-name">
+                                                TV, Video & Home Audio Electronics
+                                            </div>
+                                        </a>
+                                    </div>
+
                                 </div>
 
                             </div>
+
+                            
 
                         </div>
                     </div>
@@ -180,10 +316,11 @@
             </div>
         </main>
 
-        <?php 
+        <?php
             include "../components/Footer.php"
         ?>
 
     </div>
 </body>
+
 </html>
