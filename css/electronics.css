@@ -3,3 +3,92 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+body {
+    font-family: "Market Sans", Arial, sans-serif;
+}
+
+.body-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container {
+    width: 1550px;
+    max-width: 100%;
+    margin: auto;
+}
+
+.main {
+    flex: 1;
+}
+
+.main-wrapper {
+    padding: 20px 60px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.main-top-banner {
+    background: url("../images/electronics-top-banner1.webp") no-repeat center;
+    background-size: cover;
+    width: 100%;
+    height: 200px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.main-top-banner-title {
+    font-size: 26px;
+    -webkit-text-stroke-width: 1px;
+}
+
+.main-top-banner-text {
+    width: 300px;
+    max-width: 100%;
+    font-size: 20px;
+    line-height: 1.5;
+    -webkit-text-stroke-width: 0.1px;
+}
+
+.main-shop-content {
+    display: grid;
+    grid-template-columns: 20% 80%;
+}
+
+.shop-list-side {
+    padding: 0 20px 0 0;
+}
+
+.shop-list-side ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.shop-list-side ul li p {
+    font-size: 15px;
+    -webkit-text-stroke-width: 0.5px;
+    margin-bottom: 10px;
+}
+
+.shop-list-side ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 13px;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.list-side-line {
+    width: 100%;
+    margin: 15px 0;
+    border: dashed 1px lightgray;
+}
