@@ -18,14 +18,45 @@
         <?php include "../components/Header.php" ?>
 
         <main class="main">
+            
+            <div class="sort-by-controllers-block">
+                
+            </div>
 
             <div class="shop-body">
 
                 <div class="shop-filter">
+                    <ul>
+                        <li><b>Type</b></li>
+                        <li><a href="#">Mobiles</a></li>
+                        <li><a href="#">Tablets/Ipads</a></li>
+                        <li><a href="#">Laptops</a></li>
+                        <li><a href="#">PCs</a></li>
+                        <li><a href="#">TVs</a></li>
+                        <li><a href="#">Consoles</a></li>
+                        <li><a href="#">Headsets</a></li>
+                        <li><a href="#">Smartwatches</a></li>
+                    </ul>
+
+                    <ul>
+                        <li><b>Price</b></li>
+                        <li><a href="#">Mobiles</a></li>
+                        <li><a href="#">Tablets/Ipads</a></li>
+                        <li><a href="#">Laptops</a></li>
+                        <li><a href="#">PCs</a></li>
+                        <li><a href="#">TVs</a></li>
+                        <li><a href="#">Consoles</a></li>
+                        <li><a href="#">Headsets</a></li>
+                        <li><a href="#">Smartwatches</a></li>
+                    </ul>
+
                     
                 </div>
 
+
                 <div class="shop-products">
+
+
 
                 </div>
 
