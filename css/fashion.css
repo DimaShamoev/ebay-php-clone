@@ -1,0 +1,75 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Market Sans", Arial, sans-serif;
+}
+
+.body-wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container {
+    width: 1550px;
+    max-width: 100%;
+    margin: auto;
+}
+
+.main {
+    flex: 1;
+    padding: 20px 60px 30px 60px;
+}
+
+.main-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.fashion-title {
+    font-size: 30px;
+    -webkit-text-stroke: 1px;
+    letter-spacing: 2px;
+}
+
+.fashion-offers {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    gap: 30px;
+}
+
+.fashion-offer {
+    border-radius: 30px;
+    overflow: hidden;
+}
+
+.fashion-offer img {
+    width: 100%;
+    height: auto;
+}
+
+@media screen and (max-width: 850px) {
+    .main {
+        padding: 20px 10px 30px 10px;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .fashion-offers {
+        grid-template-columns: repeat(2, auto);
+        gap: 20px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .fashion-offers {
+        grid-template-columns: auto;
+        gap: 20px;
+    }
+}
