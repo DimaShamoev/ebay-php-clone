@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="../css/fashion.css">
     <link rel="stylesheet" href="../css/components.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <title>Document</title>
+    <title>Fashion</title>
 </head>
 <body>
     <div class="body-wrapper">
