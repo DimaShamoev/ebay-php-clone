@@ -23,7 +23,7 @@
 
                 <div class="sort-by-controllers-block">
 
-                </div>
+            </div>
 
                 <div class="shop-body">
 

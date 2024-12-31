@@ -32,7 +32,6 @@ body {
 }
 
 .shop-filter {
-    /* background-color: lightcyan; */
     display: flex;
     flex-direction: column;
     gap: 20px;
