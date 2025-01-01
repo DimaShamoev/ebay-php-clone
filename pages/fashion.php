@@ -13,6 +13,7 @@
     <div class="body-wrapper">
 
         <?php include "../components/Header.php" ?>
+
         <main class="main">
             <div class="container">
                 <div class="main-wrapper">
@@ -55,6 +56,7 @@
                 </div>
             </div>
         </main>
+        
         <?php include "../components/Footer.php" ?>
 
     </div>

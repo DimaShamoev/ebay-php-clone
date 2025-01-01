@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,7 +9,6 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <title>Electronics Shop</title>
 </head>
-
 <body>
 
     <div class="body-wrapper">
@@ -20,8 +18,7 @@
         <main class="main">
             <div class="container">
 
-
-                <div class="sort-by-controllers-block">
+                <div class="sort-by-controllers-block"></div>
 
             </div>
 
@@ -52,13 +49,10 @@
                             <li><a href="#">Smartwatches</a></li>
                         </ul>
 
-
                     </div>
 
 
                     <div class="shop-products">
-
-
 
                     </div>
 
@@ -72,7 +66,5 @@
 
     </div>
 
-
 </body>
-
 </html>
