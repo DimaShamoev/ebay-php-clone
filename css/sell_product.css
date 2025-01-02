@@ -1,0 +1,79 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Market Sans", Arial, sans-serif;
+}
+
+.body-wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container {
+    width: 1550px;
+    max-width: 100%;
+    margin: auto;
+}
+
+.header {
+    border-bottom: 2px solid #d3d3d3;
+    padding: 10px 60px;
+}
+
+.header-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-wrapper a {
+    color: #0654BA;
+    font-size: 14px;
+}
+
+.main {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.main-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 0;
+}
+
+.main-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 400px;
+    max-width: 100%;
+}
+
+.form-title {
+    font-size: 30px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.product-value input {
+    width: 100%;
+    height: 40px;
+    background-color: #F7F7F7;
+    border: solid 2px #8F8F8F;
+    border-radius: 5px;
+    padding: 0 10px;
+
+    &::placeholder {
+        color: black;
+        -webkit-text-stroke-width: 0.3px;
+    }
+}
