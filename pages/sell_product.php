@@ -29,34 +29,40 @@
         <main class="main">
             <div class="container">
                 <div class="main-wrapper">
-                    <form method="POST" action="" class="main-form">
+                    <form method="POST" action="" class="main-form" enctype="multipart/form-data">
 
                         <div class="form-title">
                             Publish Your Product
                         </div>
 
                         <div class="input-block product-value">
-                            <input type="text" placeholder="Category">
+                            <input type="text" name="category_id" placeholder="Category" required>
                         </div>
 
                         <div class="input-block product-value">
-                            <input type="text" placeholder="Title">
+                            <input type="text" name="product_title" placeholder="Title" required>
                         </div>
 
                         <div class="input-block product-value">
-                            <input type="text" placeholder="Description">
+                            <input name="product_description" type="text" placeholder="Description" required>
                         </div>
 
                         <div class="input-block product-value">
-                            <input type="text" placeholder="Price">
+                            <input type="text" name="product_price" placeholder="Price" required>
                         </div>
 
                         <div class="input-block product-value">
-                            <input type="text" placeholder="Quantity">
+                            <input type="text" name="stock_quantity" placeholder="Quantity" required>
                         </div>
 
                         <div class="input-block file-upload">
-                            <input type="file">
+                            <input type="file" name="images[]" required>
+                        </div>
+
+                        <div class="submit-btn">
+                            <button type="submit">
+                                Submit
+                            </button>
                         </div>
 
                     </form>
