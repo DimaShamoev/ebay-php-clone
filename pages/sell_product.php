@@ -7,7 +7,7 @@
     <link rel="icon" type="png" href="../images/ebay.png">
     <link rel="stylesheet" href="../css/components.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <title>Document</title>
+    <title>Sell Product</title>
 </head>
 <body>
     <div class="body-wrapper">
@@ -27,12 +27,11 @@
         <main class="main">
             <div class="container">
                 <div class="main-wrapper">
-                    <form method="POST" action="" class="main-form" enctype="multipart/form-data">
+                    <form method="POST" action="/ebay-php-clone/connection/upload.php" class="main-form" enctype="multipart/form-data">
                         <div class="form-title">
                             Publish Your Product
                         </div>
 
-                        <!-- Select dropdown for category -->
                         <div class="input-block product-value">
                             <select name="category_id" required>
                                 <option value="" disabled selected>Select Category</option>
