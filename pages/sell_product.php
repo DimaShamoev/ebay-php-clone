@@ -10,9 +10,7 @@
     <title>Document</title>
 </head>
 <body>
-    
     <div class="body-wrapper">
-
         <header class="header">
             <div class="container">
                 <div class="header-wrapper">
@@ -30,13 +28,18 @@
             <div class="container">
                 <div class="main-wrapper">
                     <form method="POST" action="" class="main-form" enctype="multipart/form-data">
-
                         <div class="form-title">
                             Publish Your Product
                         </div>
 
+                        <!-- Select dropdown for category -->
                         <div class="input-block product-value">
-                            <input type="text" name="category_id" placeholder="Category" required>
+                            <select name="category_id" required>
+                                <option value="" disabled selected>Select Category</option>
+                                <option value="1">Tech</option>
+                                <option value="2">Fashion</option>
+                                <option value="3">Motors</option>
+                            </select>
                         </div>
 
                         <div class="input-block product-value">
@@ -64,14 +67,12 @@
                                 Submit
                             </button>
                         </div>
-
                     </form>
                 </div>
             </div>
         </main>
 
         <?php include "../components/Footer.php" ?>
-
     </div>
 </body>
 </html>
