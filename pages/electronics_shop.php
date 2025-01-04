@@ -54,7 +54,21 @@
                     <?php
                             include "../connection/database_connection.php";
 
-                            $request = "SELECT * FROM products WHERE category_id IN (1, 2, 3)";
+                            $category = isset($_GET['category']) ? $_GET['category'] : null;
+
+                            $category_map = [
+                                'mobiles' => 1,
+                                'pcs' => 2,
+                                'accessories' => 3,
+                            ];
+
+                            if ($category && isset($category_map[$category])) {
+                                $category_id = $category_map[$category];
+                                $request = "SELECT * FROM products WHERE category_id = $category_id";
+                            } else {
+                                $request = "SELECT * FROM products WHERE category_id IN (1, 2, 3)"; // Show products only in categories 1, 2, and 3
+                            }
+
                             $result = mysqli_query($conn, $request);
                             $arr = mysqli_fetch_all($result);
 
@@ -69,7 +83,7 @@
                                 $image_row = mysqli_fetch_row($image_result);
                         ?>
 
-                            <a href="?product=<?=$elem[0]?>">
+                            <a href="product_details.php?product=<?=$elem[0]?>">
 
                                 <div class="product-images">
                                     <img src="<?=htmlspecialchars($image_row[0] ?? 'default.png')?>" alt="<?=htmlspecialchars($image_row[1] ?? 'No description')?>" />
