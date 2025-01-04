@@ -54,7 +54,7 @@ if ($product_id) {
                         <div class="product-info">
                             <p class="title"><strong>Title:</strong> <?=htmlspecialchars($product[3])?></p>
                             <p class="desc"><strong>Description:</strong> <?=htmlspecialchars($product[4])?></p>
-                            <p class="extra-info"><strong>Price:</strong> $<?=htmlspecialchars($product[3])?></p>
+                            <p class="extra-info"><strong>Price:</strong> $<?=htmlspecialchars($product[5])?></p>
                             <p class="extra-info"><strong>Quantity:</strong> <?=htmlspecialchars($product[6])?></p>
                             <p class="extra-info"><strong>Uploaded by:</strong> <?=htmlspecialchars($user_row[0])?></p>
                             <p class="extra-info"><strong>Uploaded on:</strong> <?=htmlspecialchars($product[7])?></p>

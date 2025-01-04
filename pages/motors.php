@@ -28,9 +28,9 @@
                     <div class="shop-filter">
                         <ul>
                             <li><b>Type</b></li>
-                            <li><a href="#">Engine parts</a></li>
-                            <li><a href="#">Tires and wheels</a></li>
-                            <li><a href="#">Car accessories</a></li>
+                            <li><a href="?category=rims">Car Rims</a></li>
+                            <li><a href="?category=camera">Car Cameras</a></li>
+                            <li><a href="?category=accessories">Car accessories</a></li>
                             <li><a href="#">Interior parts</a></li>
                             <li><a href="#">Exterior parts</a></li>
                             <li><a href="#">Electrical components</a></li>
@@ -42,14 +42,10 @@
 
                         <ul>
                             <li><b>Price</b></li>
-                            <li><a href="#">Mobiles</a></li>
-                            <li><a href="#">Tablets/Ipads</a></li>
-                            <li><a href="#">Laptops</a></li>
-                            <li><a href="#">PCs</a></li>
-                            <li><a href="#">TVs</a></li>
-                            <li><a href="#">Consoles</a></li>
-                            <li><a href="#">Headsets</a></li>
-                            <li><a href="#">Smartwatches</a></li>
+                            <li><a href="#">0$ - 100$</a></li>
+                            <li><a href="#">100$ - 250$</a></li>
+                            <li><a href="#">250$ - 500$</a></li>
+                            <li><a href="#">500$</a></li>
                         </ul>
 
 
@@ -58,7 +54,55 @@
 
                     <div class="shop-products">
 
+                    <?php
+                            include "../connection/database_connection.php";
 
+                            $category = isset($_GET['category']) ? $_GET['category'] : null;
+
+                            $category_map = [
+                                'rims' => 4,
+                                'camera' => 5,
+                                'accessories' => 6,
+                            ];
+
+                            if ($category && isset($category_map[$category])) {
+                                $category_id = $category_map[$category];
+                                $request = "SELECT * FROM products WHERE category_id = $category_id";
+                            } else {
+                                $request = "SELECT * FROM products WHERE category_id IN (4, 5, 6)";
+                            }
+
+                            $result = mysqli_query($conn, $request);
+                            $arr = mysqli_fetch_all($result);
+
+                            foreach($arr as $elem) {
+                                // Fetch the username for the user related to the product
+                                $user_query = "SELECT user_username FROM users WHERE user_id = $elem[1]";
+                                $user_result = mysqli_query($conn, $user_query);
+                                $user_row = mysqli_fetch_row($user_result);
+
+                                $image_query = "SELECT image_url, image_alt FROM images WHERE product_id = $elem[0]";
+                                $image_result = mysqli_query($conn, $image_query);
+                                $image_row = mysqli_fetch_row($image_result);
+                        ?>
+
+                            <a href="product_details.php?product=<?=$elem[0]?>">
+
+                                <div class="product-images">
+                                    <img src="<?=htmlspecialchars($image_row[0] ?? 'default.png')?>" alt="<?=htmlspecialchars($image_row[1] ?? 'No description')?>" />
+                                </div>    
+
+                                <div class="product-info">
+                                    <p class="title"><?=$elem[3]?></p>
+                                    <p class="desc"><?=$elem[4]?></p>
+                                    <p class="extra-info">Price: <?=$elem[5]?></p>
+                                    <p class="extra-info">Quantity: <?=$elem[6]?></p>
+                                    <p class="extra-info">Upload: <?=$user_row[0]?></p>
+                                    <p class="extra-info">Uploaded: <?=$elem[7]?></p>
+                                </div>                                
+                            </a>
+
+                        <?php } ?>  
 
                     </div>
 

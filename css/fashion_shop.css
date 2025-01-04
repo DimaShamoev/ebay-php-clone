@@ -67,7 +67,50 @@ body {
 }
 
 .shop-products {
-    background-color: rgb(187, 253, 193);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+
+}
+
+
+.shop-products a {
+    width: 100%;
+    overflow: hidden;
+    border: solid 1px black;
+    text-decoration: none;
+    color: black;
+}
+
+.product-images {
+    display: flex;
+    justify-content: center;
+}
+
+.product-images img {
+    height: auto;
+    width: 100%;
+}
+
+.product-info {
+    padding: 0 40px 20px 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.title {
+    font-size: 25px;
+    -webkit-text-stroke: 0.3px;
+}
+
+.desc {
+    font-size: 20px;
+    color: #777777;
+}
+
+.extra-info {
+    font-size: 14px;
 }
 
 
