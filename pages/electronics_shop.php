@@ -25,36 +25,31 @@
                 <div class="shop-body">
 
                     <div class="shop-filter">
-                        <ul>
-                            <li><b>Type</b></li>
-                            <li><a href="#">Mobiles</a></li>
-                            <li><a href="#">Tablets/Ipads</a></li>
-                            <li><a href="#">Laptops</a></li>
-                            <li><a href="#">PCs</a></li>
-                            <li><a href="#">TVs</a></li>
-                            <li><a href="#">Consoles</a></li>
-                            <li><a href="#">Headsets</a></li>
-                            <li><a href="#">Smartwatches</a></li>
-                        </ul>
+                    <ul>
+                        <li><b>Type</b></li>
+                        <li><a href="?category=mobiles">Mobiles</a></li>
+                        <li><a href="?category=pcs">PCs</a></li>
+                        <li><a href="?category=accessories">Accessories</a></li>
+                        <li><a href="?category=consoles">Consoles</a></li>
+                        <li><a href="?category=headsets">Headsets</a></li>
+                        <li><a href="?category=smartwatches">Smartwatches</a></li>
+                    </ul>
 
                         <div class="shop-filter-dashed-line"></div>
 
                         <ul>
                             <li><b>Price</b></li>
-                            <li><a href="#">Mobiles</a></li>
-                            <li><a href="#">Tablets/Ipads</a></li>
-                            <li><a href="#">Laptops</a></li>
-                            <li><a href="#">PCs</a></li>
-                            <li><a href="#">TVs</a></li>
-                            <li><a href="#">Consoles</a></li>
-                            <li><a href="#">Headsets</a></li>
-                            <li><a href="#">Smartwatches</a></li>
+                            <li><a href="#">0$ - 100$</a></li>
+                            <li><a href="#">100$ - 250$</a></li>
+                            <li><a href="#">250$ - 500$</a></li>
+                            <li><a href="#">500$</a></li>
                         </ul>
 
                     </div>
 
 
                     <div class="shop-products">
+
 
                     <?php
                             include "../connection/database_connection.php";
@@ -68,31 +63,26 @@
                                 $user_query = "SELECT user_username FROM users WHERE user_id = $elem[1]";
                                 $user_result = mysqli_query($conn, $user_query);
                                 $user_row = mysqli_fetch_row($user_result);
+
+                                $image_query = "SELECT image_url, image_alt FROM images WHERE product_id = $elem[0]";
+                                $image_result = mysqli_query($conn, $image_query);
+                                $image_row = mysqli_fetch_row($image_result);
                         ?>
 
                             <a href="?product=<?=$elem[0]?>">
-                                <p><?=$elem[0]?></p>
-                                <p><?=$user_row[0]?></p>
-                                <p><?=$elem[2]?></p>
-                                <p><?=$elem[3]?></p>
-                                <p><?=$elem[4]?></p>
-                                <p><?=$elem[5]?></p>
-                                <p><?=$elem[6]?></p>
-                                <p><?=$elem[7]?></p>
 
                                 <div class="product-images">
-                                    <?php 
-                                        // Fetch the images for the current product
-                                        $image_query = "SELECT image_url, image_alt FROM images WHERE product_id = $elem[0]";
-                                        $image_result = mysqli_query($conn, $image_query);
+                                    <img src="<?=htmlspecialchars($image_row[0] ?? 'default.png')?>" alt="<?=htmlspecialchars($image_row[1] ?? 'No description')?>" />
+                                </div>    
 
-                                        // Loop through all images for this product
-                                        while($image_row = mysqli_fetch_row($image_result)) { ?>
-                                            <img src="<?=htmlspecialchars($image_row[0] ?? 'default.png')?>" alt="<?=htmlspecialchars($image_row[1] ?? 'No description')?>" />
-                                    <?php } ?>
-                                </div>
-
-                                <p>--------------</p>
+                                <div class="product-info">
+                                    <p class="title"><?=$elem[3]?></p>
+                                    <p class="desc"><?=$elem[4]?></p>
+                                    <p class="extra-info">Price: <?=$elem[5]?></p>
+                                    <p class="extra-info">Quantity: <?=$elem[6]?></p>
+                                    <p class="extra-info">Upload: <?=$user_row[0]?></p>
+                                    <p class="extra-info">Uploaded: <?=$elem[7]?></p>
+                                </div>                                
                             </a>
 
                         <?php } ?>  
