@@ -37,6 +37,8 @@
                             <li><a href="#">Smartwatches</a></li>
                         </ul>
 
+                        <div class="shop-filter-dashed-line"></div>
+
                         <ul>
                             <li><b>Price</b></li>
                             <li><a href="#">Mobiles</a></li>
@@ -53,6 +55,36 @@
 
 
                     <div class="shop-products">
+
+                    <?php
+include "../connection/database_connection.php";
+
+$request = "SELECT * FROM products WHERE category_id IN (1, 2, 3)";
+$result = mysqli_query($conn, $request);
+$arr = mysqli_fetch_all($result);
+
+foreach($arr as $elem) {
+    $user_query = "SELECT user_username FROM users WHERE user_id = $elem[1]";
+    $user_result = mysqli_query($conn, $user_query);
+    $user_row = mysqli_fetch_row($user_result);
+?>
+
+<li>
+    <p><?=$elem[0]?></p>
+    <p><?=htmlspecialchars($user_row[0] ?? 'Unknown')?></p>
+    <p><?=$elem[2]?></p>
+    <p><?=$elem[3]?></p>
+    <p><?=$elem[4]?></p>
+    <p><?=$elem[5]?></p>
+    <p><?=$elem[6]?></p>
+    <p><?=$elem[7]?></p>
+    <p>--------------</p>
+</li>
+
+<?php } ?>
+
+
+
 
                     </div>
 

@@ -35,9 +35,18 @@
                         <div class="input-block product-value">
                             <select name="category_id" required>
                                 <option value="" disabled selected>Select Category</option>
-                                <option value="1">Tech</option>
-                                <option value="2">Fashion</option>
-                                <option value="3">Motors</option>
+                                <option value="1">mobile</option>
+                                <option value="2">pc</option>
+                                <option value="3">accessories</option>
+                                <option value="4">rims</option>
+                                <option value="5">car camera</option>
+                                <option value="6">car accessories</option>
+                                <option value="7">woman</option>
+                                <option value="8">man</option>
+                                <option value="9">kid</option>
+                                <option value="10">gym</option>
+                                <option value="11">sport equipment</option>
+                                <option value="12">sport shoes</option>
                             </select>
                         </div>
 
@@ -58,7 +67,7 @@
                         </div>
 
                         <div class="input-block file-upload">
-                            <input type="file" name="images[]" required>
+                            <input type="file" name="images[]" multiple="multiple" required>
                         </div>
 
                         <div class="submit-btn">

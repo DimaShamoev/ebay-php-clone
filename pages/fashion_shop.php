@@ -37,6 +37,8 @@
                             <li><a href="#">Smartwatches</a></li>
                         </ul>
 
+                        <div class="shop-filter-dashed-line"></div>
+
                         <ul>
                             <li><b>Price</b></li>
                             <li><a href="#">Mobiles</a></li>
