@@ -1,6 +1,3 @@
-
-
-    
 <footer class="footer">
     <div class="container">
 
@@ -94,16 +91,8 @@
                     <li><a href="#">Your Privacy Choices <img width="20" src="/ebay-php-clone/images/privacy-icon.svg" alt=""></a></li>
                     <li>and</li>
                     <li><a href="#">AdChoice</a></li>
-
                 </ul>
-                
             </div>
-
-            
         </div>
-
-
     </div>
-
-
 </footer>

@@ -28,7 +28,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['comment'])) {
     if (isset($_COOKIE['username'])) {
         $username = $_COOKIE['username'];
 
-        // Fetch user_id
         $user_query = "SELECT user_id FROM users WHERE user_username = '$username'";
         $user_result = mysqli_query($conn, $user_query);
 
@@ -43,16 +42,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['comment'])) {
                          VALUES ($user_id, $product_id, $rating, '$comment', NOW())";
         mysqli_query($conn, $insert_query);
 
-        // Redirect to the same page to prevent resubmission
         header("Location: product_details.php?product=$product_id");
         exit;
     }
 }
 
-// Initialize the $comments array
 $comments = [];
 
-// Fetch comments for the product
 $comments_query = "SELECT f.comment, f.created_date, u.user_username 
                    FROM feedbacks f 
                    JOIN users u ON f.user_id = u.user_id 
@@ -154,7 +150,6 @@ if ($comments_result && mysqli_num_rows($comments_result) > 0) {
                         </div>
                     </div>
 
-                    <!-- Comments display -->
                     <div class="comments-block">
                         <h3>Comments</h3>
                         <?php if (count($comments) > 0): ?>

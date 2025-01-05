@@ -31,4 +31,3 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         header("Location: ../pages/sign_up.php?error=Username already exists");
     }
 }
-?>
