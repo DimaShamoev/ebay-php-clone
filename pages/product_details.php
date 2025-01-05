@@ -4,20 +4,17 @@ include "../connection/database_connection.php";
 $product_id = isset($_GET['product']) ? (int)$_GET['product'] : null;
 
 if ($product_id) {
-    // Fetch product details
     $product_query = "SELECT * FROM products WHERE product_id = $product_id";
     $product_result = mysqli_query($conn, $product_query);
     $product = mysqli_fetch_row($product_result);
 
-    // Fetch the username for the user related to the product
     $user_query = "SELECT user_username FROM users WHERE user_id = $product[1]";
     $user_result = mysqli_query($conn, $user_query);
     $user_row = mysqli_fetch_row($user_result);
 
-    // Fetch product images
     $image_query = "SELECT image_url, image_alt FROM images WHERE product_id = $product_id";
     $image_result = mysqli_query($conn, $image_query);
-    $image_rows = mysqli_fetch_all($image_result); // Use numerical indexes
+    $image_rows = mysqli_fetch_all($image_result);
 } else {
     echo "Invalid product ID.";
     exit;
@@ -30,7 +27,7 @@ if ($product_id) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="png" href="../images/ebay.png">
-    <link rel="stylesheet" href="../css/electronics_shop.css">
+    <link rel="stylesheet" href="../css/product_details.css">
     <link rel="stylesheet" href="../css/components.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <title>Product Details</title>
@@ -41,28 +38,58 @@ if ($product_id) {
 
         <main class="main">
             <div class="container">
-                <h1>Product Details</h1>
+                <div class="main-wrapper">
 
-                <?php if ($product): ?>
-                    <div class="product-details">
-                        <div class="product-images">
-                            <?php foreach ($image_rows as $image): ?>
-                                <img src="<?=htmlspecialchars($image[0])?>" alt="<?=htmlspecialchars($image[1])?>" />
-                            <?php endforeach; ?>
+                    <h1>Product Details</h1>
+
+                    <?php if ($product) { ?>
+                        <div class="product-details">
+                            <div class="product-images">
+                                <div class="primary-product-image">
+                                <?php if (!empty($image_rows)) { ?>
+                                    <img src="<?= htmlspecialchars($image_rows[0][0]) ?>" alt="<?= htmlspecialchars($image_rows[0][1]) ?>" />
+                                <?php }?>
+                                </div>
+                                <div class="product-images-column">
+
+                                    <?php foreach ($image_rows as $image) { ?>
+                                        <img src="<?=htmlspecialchars($image[0])?>" alt="<?=htmlspecialchars($image[1])?>" />
+                                    <?php } ?>
+                                </div>
+                            </div>
+
+                            <div class="product-info">
+                                <p class="title"><strong>Title:</strong> <?=htmlspecialchars($product[3])?></p>
+                                <p class="desc"><strong>Description:</strong> <?=htmlspecialchars($product[4])?></p>
+                                <p class="extra-info"><strong>Price:</strong> $<?=htmlspecialchars($product[5])?></p>
+                                <p class="extra-info"><strong>Quantity:</strong> <?=htmlspecialchars($product[6])?></p>
+                                <p class="extra-info"><strong>Uploaded by:</strong> <?=htmlspecialchars($user_row[0])?></p>
+                                <p class="extra-info"><strong>Uploaded on:</strong> <?=htmlspecialchars($product[7])?></p>
+                            </div>
                         </div>
+                    <?php  } else { ?>
+                        <p>Product not found.</p>
+                    <?php } ?>
 
-                        <div class="product-info">
-                            <p class="title"><strong>Title:</strong> <?=htmlspecialchars($product[3])?></p>
-                            <p class="desc"><strong>Description:</strong> <?=htmlspecialchars($product[4])?></p>
-                            <p class="extra-info"><strong>Price:</strong> $<?=htmlspecialchars($product[5])?></p>
-                            <p class="extra-info"><strong>Quantity:</strong> <?=htmlspecialchars($product[6])?></p>
-                            <p class="extra-info"><strong>Uploaded by:</strong> <?=htmlspecialchars($user_row[0])?></p>
-                            <p class="extra-info"><strong>Uploaded on:</strong> <?=htmlspecialchars($product[7])?></p>
+                    <div class="comment-block">
+                        <div class="container">
+                            <div class="comment-block-wrapper">
+
+                                <div class="comment-input-block">
+                                    <textarea></textarea>
+                                </div>
+
+                                <div class="btn-submit">
+                                    <button type="submit">
+                                        Submit
+                                    </button>
+                                </div>
+
+                            </div>
                         </div>
                     </div>
-                <?php else: ?>
-                    <p>Product not found.</p>
-                <?php endif; ?>
+
+                </div>
             </div>
         </main>
 
