@@ -45,26 +45,38 @@ if ($product_id) {
                     <?php if ($product) { ?>
                         <div class="product-details">
                             <div class="product-images">
-                                <div class="primary-product-image">
-                                <?php if (!empty($image_rows)) { ?>
-                                    <img src="<?= htmlspecialchars($image_rows[0][0]) ?>" alt="<?= htmlspecialchars($image_rows[0][1]) ?>" />
-                                <?php }?>
-                                </div>
                                 <div class="product-images-column">
 
                                     <?php foreach ($image_rows as $image) { ?>
                                         <img src="<?=htmlspecialchars($image[0])?>" alt="<?=htmlspecialchars($image[1])?>" />
                                     <?php } ?>
                                 </div>
+                                <div class="primary-product-image">
+                                    <?php if (!empty($image_rows)) { ?>
+                                        <img src="<?= htmlspecialchars($image_rows[0][0]) ?>" alt="<?= htmlspecialchars($image_rows[0][1]) ?>" />
+                                    <?php }?>
+                                </div>
                             </div>
 
                             <div class="product-info">
-                                <p class="title"><strong>Title:</strong> <?=htmlspecialchars($product[3])?></p>
-                                <p class="desc"><strong>Description:</strong> <?=htmlspecialchars($product[4])?></p>
-                                <p class="extra-info"><strong>Price:</strong> $<?=htmlspecialchars($product[5])?></p>
-                                <p class="extra-info"><strong>Quantity:</strong> <?=htmlspecialchars($product[6])?></p>
-                                <p class="extra-info"><strong>Uploaded by:</strong> <?=htmlspecialchars($user_row[0])?></p>
-                                <p class="extra-info"><strong>Uploaded on:</strong> <?=htmlspecialchars($product[7])?></p>
+                                <div class="product-title-desc">
+                                    <p class="title"><?=htmlspecialchars($product[3])?></p>
+                                    <div class="line"></div>
+                                    <p class="desc"><?=htmlspecialchars($product[4])?></p>
+                                    <div class="line"></div>
+                                </div>
+                                <div class="product-extra-info-block">
+                                    <p class="extra-info price">US $<?=htmlspecialchars($product[5])?></p>
+                                    <p class="extra-info quantity"><strong>Quantity:</strong> <?=htmlspecialchars($product[6])?></p>
+                                    <p class="extra-info upload"><strong>Uploaded by:</strong> <?=htmlspecialchars($user_row[0])?></p>
+                                    <p class="extra-info created-at"><strong>Uploaded on:</strong> <?=htmlspecialchars($product[7])?></p>
+                                </div>
+
+                                <div class="buy-btn">
+                                    <button>
+                                        Buy It Now  
+                                    </button>
+                                </div>
                             </div>
                         </div>
                     <?php  } else { ?>
