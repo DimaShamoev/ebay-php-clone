@@ -39,9 +39,6 @@ if ($product_id) {
         <main class="main">
             <div class="container">
                 <div class="main-wrapper">
-
-                    <h1>Product Details</h1>
-
                     <?php if ($product) { ?>
                         <div class="product-details">
                             <div class="product-images">
@@ -86,19 +83,27 @@ if ($product_id) {
                     <div class="comment-block">
                         <div class="container">
                             <div class="comment-block-wrapper">
-
-                                <div class="comment-input-block">
-                                    <textarea></textarea>
+                                <div class="comment-title">
+                                    Leave Your Comment
                                 </div>
+                                <div class="comment-form">
+                                    <div class="comment-input-block">
+                                        <textarea></textarea>
+                                    </div>
 
-                                <div class="btn-submit">
-                                    <button type="submit">
-                                        Submit
-                                    </button>
+                                    <div class="btn-submit">
+                                        <button type="submit">
+                                            Submit
+                                        </button>
+                                    </div>
                                 </div>
 
                             </div>
                         </div>
+                    </div>
+
+                    <div class="comments-block">
+                        
                     </div>
 
                 </div>

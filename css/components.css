@@ -132,6 +132,7 @@
 }
 
 .header-bottom-search-button button {
+    cursor: pointer;
     height: 100%;
     width: 100%;
     border-radius: 30px;
@@ -139,6 +140,11 @@
     background-color: #3665F3;
     color: white;
     font-size: 18px;
+    transition: 0.2s;
+
+    &:hover {
+        background-color: #174ae1;
+    }
 }
 
 /* Footer */
