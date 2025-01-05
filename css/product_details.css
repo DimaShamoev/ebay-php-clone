@@ -162,3 +162,41 @@ body {
         color: blue;
     }
 }
+
+@media screen and (max-width: 910px) {
+    .product-images {
+        flex-direction: column-reverse;
+    }
+
+    .product-images-column {
+        flex-direction: row;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .main {
+        padding: 40px 10px;
+    }
+}
+
+@media screen and (max-width: 745px) {
+    .product-images-column img {
+        width: 100px;
+    }
+}
+
+@media screen and (max-width: 645px) {
+    .product-details {
+        grid-template-columns: 1fr;
+    }
+
+    .title {
+        font-size: 40px;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .product-images-column img {
+        width: 80px;
+    }
+}
