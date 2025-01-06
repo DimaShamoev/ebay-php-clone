@@ -3,54 +3,47 @@ include "../connection/database_connection.php";
 
 $product_id = isset($_GET['product']) ? (int)$_GET['product'] : null;
 
-if ($product_id) {
-    $product_query = "SELECT * FROM products WHERE product_id = $product_id";
-    $product_result = mysqli_query($conn, $product_query);
-    $product = mysqli_fetch_row($product_result);
-
-    $user_query = "SELECT user_username FROM users WHERE user_id = $product[1]";
-    $user_result = mysqli_query($conn, $user_query);
-    $user_row = mysqli_fetch_row($user_result);
-
-    $image_query = "SELECT image_url, image_alt FROM images WHERE product_id = $product_id";
-    $image_result = mysqli_query($conn, $image_query);
-    $image_rows = mysqli_fetch_all($image_result);
-} else {
+if (!$product_id) {
     echo "Invalid product ID.";
     exit;
 }
+
+$product_query = "SELECT * FROM products WHERE product_id = $product_id";
+$product_result = mysqli_query($conn, $product_query);
+$product = mysqli_fetch_row($product_result);
+
+$user_query = "SELECT user_username FROM users WHERE user_id = $product[1]";
+$user_result = mysqli_query($conn, $user_query);
+$user_row = mysqli_fetch_row($user_result);
+
+$image_query = "SELECT image_url, image_alt FROM images WHERE product_id = $product_id";
+$image_result = mysqli_query($conn, $image_query);
+$image_rows = mysqli_fetch_all($image_result);
 
 if (isset($_GET['add_to_cart'])) {
     $product_id = (int)$_GET['add_to_cart'];
     $user_id = null;
 
-    // Check if the user is logged in via a cookie
     if (isset($_COOKIE['username'])) {
         $username = $_COOKIE['username'];
-
-        // Get the user's ID
         $user_query = "SELECT user_id FROM users WHERE user_username = '$username'";
         $user_result = mysqli_query($conn, $user_query);
-        $user_row = mysqli_fetch_assoc($user_result);
-        $user_id = $user_row['user_id'];
+        $user_row = mysqli_fetch_row($user_result);
+        $user_id = $user_row[0];
     }
 
     if ($user_id) {
-        // Check if the product is already in the cart
         $check_cart_query = "SELECT * FROM carts WHERE user_id = $user_id AND product_id = $product_id";
         $check_cart_result = mysqli_query($conn, $check_cart_query);
 
         if (mysqli_num_rows($check_cart_result) > 0) {
-            // If product is already in cart, update the quantity
             $update_cart_query = "UPDATE carts SET quantity = quantity + 1 WHERE user_id = $user_id AND product_id = $product_id";
             mysqli_query($conn, $update_cart_query);
         } else {
-            // If product is not in cart, insert it
             $insert_cart_query = "INSERT INTO carts (user_id, product_id, quantity, created_date) VALUES ($user_id, $product_id, 1, NOW())";
             mysqli_query($conn, $insert_cart_query);
         }
 
-        // Redirect to avoid resubmission
         header("Location: product_details.php?product=$product_id");
         exit;
     } else {
@@ -58,20 +51,19 @@ if (isset($_GET['add_to_cart'])) {
     }
 }
 
-if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['comment'])) {
-    $user_id = null; // Initialize user_id
+if (isset($_POST['comment'])) {
+    $user_id = null;
     $comment = trim($_POST['comment']);
     $rating = isset($_POST['rating']) ? (int)$_POST['rating'] : 0;
 
     if (isset($_COOKIE['username'])) {
         $username = $_COOKIE['username'];
-
         $user_query = "SELECT user_id FROM users WHERE user_username = '$username'";
         $user_result = mysqli_query($conn, $user_query);
 
         if ($user_result && mysqli_num_rows($user_result) > 0) {
-            $user_row = mysqli_fetch_assoc($user_result);
-            $user_id = $user_row['user_id'];
+            $user_row = mysqli_fetch_row($user_result);
+            $user_id = $user_row[0];
         }
     }
 
@@ -85,21 +77,25 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['comment'])) {
     }
 }
 
+$comments_query = "SELECT * FROM feedbacks WHERE product_id = $product_id ORDER BY created_date DESC";
+$comments_result = mysqli_query($conn, $comments_query);
 $comments = [];
 
-$comments_query = "SELECT f.comment, f.created_date, u.user_username 
-                   FROM feedbacks f 
-                   JOIN users u ON f.user_id = u.user_id 
-                   WHERE f.product_id = $product_id 
-                   ORDER BY f.created_date DESC";
-
-$comments_result = mysqli_query($conn, $comments_query);
-
 if ($comments_result && mysqli_num_rows($comments_result) > 0) {
-    $comments = mysqli_fetch_all($comments_result, MYSQLI_ASSOC);
+    while ($row = mysqli_fetch_row($comments_result)) {
+        $user_query = "SELECT user_username FROM users WHERE user_id = $row[1]";
+        $user_result = mysqli_query($conn, $user_query);
+        $user_row = mysqli_fetch_row($user_result);
+        
+        $comments[] = [
+            'comment' => $row[3],
+            'created_date' => $row[4],
+            'user_username' => $user_row[0]
+        ];
+    }
 }
-
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
