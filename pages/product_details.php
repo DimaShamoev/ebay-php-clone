@@ -20,6 +20,44 @@ if ($product_id) {
     exit;
 }
 
+if (isset($_GET['add_to_cart'])) {
+    $product_id = (int)$_GET['add_to_cart'];
+    $user_id = null;
+
+    // Check if the user is logged in via a cookie
+    if (isset($_COOKIE['username'])) {
+        $username = $_COOKIE['username'];
+
+        // Get the user's ID
+        $user_query = "SELECT user_id FROM users WHERE user_username = '$username'";
+        $user_result = mysqli_query($conn, $user_query);
+        $user_row = mysqli_fetch_assoc($user_result);
+        $user_id = $user_row['user_id'];
+    }
+
+    if ($user_id) {
+        // Check if the product is already in the cart
+        $check_cart_query = "SELECT * FROM carts WHERE user_id = $user_id AND product_id = $product_id";
+        $check_cart_result = mysqli_query($conn, $check_cart_query);
+
+        if (mysqli_num_rows($check_cart_result) > 0) {
+            // If product is already in cart, update the quantity
+            $update_cart_query = "UPDATE carts SET quantity = quantity + 1 WHERE user_id = $user_id AND product_id = $product_id";
+            mysqli_query($conn, $update_cart_query);
+        } else {
+            // If product is not in cart, insert it
+            $insert_cart_query = "INSERT INTO carts (user_id, product_id, quantity, created_date) VALUES ($user_id, $product_id, 1, NOW())";
+            mysqli_query($conn, $insert_cart_query);
+        }
+
+        // Redirect to avoid resubmission
+        header("Location: product_details.php?product=$product_id");
+        exit;
+    } else {
+        echo "You must be logged in to add products to the cart.";
+    }
+}
+
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['comment'])) {
     $user_id = null; // Initialize user_id
     $comment = trim($_POST['comment']);
@@ -112,9 +150,10 @@ if ($comments_result && mysqli_num_rows($comments_result) > 0) {
                                 </div>
 
                                 <div class="buy-btn">
-                                    <button>
-                                        Buy It Now  
-                                    </button>
+                                    <button>Buy It Now</button>
+                                    <a href="product_details.php?product=<?= htmlspecialchars($product_id) ?>&add_to_cart=<?= htmlspecialchars($product_id) ?>">
+                                        <button>Add To Cart</button>
+                                    </a>
                                 </div>
                             </div>
                         </div>

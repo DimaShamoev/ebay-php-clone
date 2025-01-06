@@ -20,7 +20,7 @@
         $result = $conn->query($query);
 
         if ($result->num_rows == 1) {
-            setcookie("username", $username, time() + (86400 * 30), "/"); // Set cookie for 30 days
+            setcookie("username", $username, time() + (86400 * 30), "/");
             header("Location: ../index.php");
         } else {
             header("Location: ../pages/sign_in.php");
