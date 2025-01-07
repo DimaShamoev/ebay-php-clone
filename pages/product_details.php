@@ -88,8 +88,8 @@ if ($comments_result && mysqli_num_rows($comments_result) > 0) {
         $user_row = mysqli_fetch_row($user_result);
         
         $comments[] = [
-            'comment' => $row[3],
-            'created_date' => $row[4],
+            'comment' => $row[4],
+            'created_date' => $row[5],
             'user_username' => $user_row[0]
         ];
     }
@@ -142,7 +142,7 @@ if ($comments_result && mysqli_num_rows($comments_result) > 0) {
                                     <p class="extra-info price">US $<?=htmlspecialchars($product[5])?></p>
                                     <p class="extra-info quantity"><strong>Quantity:</strong> <?=htmlspecialchars($product[6])?></p>
                                     <p class="extra-info upload"><strong>Uploaded by:</strong> <?=htmlspecialchars($user_row[0])?></p>
-                                    <p class="extra-info created-at"><strong>Uploaded on:</strong> <?=htmlspecialchars($product[7])?></p>
+                                    <p class="extra-info created-at"><strong>Uploaded on:</strong> <?=htmlspecialchars($product[0])?></p>
                                 </div>
 
                                 <div class="buy-btn">
@@ -192,7 +192,7 @@ if ($comments_result && mysqli_num_rows($comments_result) > 0) {
                                 <div class="comment">
                                     <p><strong><?= htmlspecialchars($comment['user_username']) ?></strong> said:</p>
                                     <p><?= htmlspecialchars($comment['comment']) ?></p>
-                                    <p class="comment-date">On <?= htmlspecialchars($comment['created_date']) ?></p>
+                                    <p class="comment-date">Upload On: <?= htmlspecialchars($comment['created_date']) ?></p>
                                     <hr>
                                 </div>
                             <?php endforeach; ?>
