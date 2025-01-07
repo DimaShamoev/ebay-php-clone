@@ -12,6 +12,15 @@ if (isset($_COOKIE['username'])) {
     $user_id = $user_row[0];
 }
 
+// Handle removal from cart
+if (isset($_POST['remove_cart'])) {
+    $cart_id = (int)$_POST['cart_id'];
+    $remove_query = "DELETE FROM carts WHERE cart_id = $cart_id AND user_id = $user_id";
+    mysqli_query($conn, $remove_query);
+    header("Location: cart.php"); // Redirect after removal
+    exit;
+}
+
 // Fetch cart items for the logged-in user
 $cart_query = "SELECT * FROM carts WHERE user_id = $user_id";
 $cart_result = mysqli_query($conn, $cart_query);
@@ -42,6 +51,7 @@ $cart_result = mysqli_query($conn, $cart_query);
                         <th>Product Title</th>
                         <th>Price</th>
                         <th>Quantity</th>
+                        <th>Action</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -72,6 +82,13 @@ $cart_result = mysqli_query($conn, $cart_query);
                             <td><?= htmlspecialchars($product[0]) ?></td>
                             <td><?= htmlspecialchars($product[1]) ?> $</td>
                             <td><?= htmlspecialchars($row['quantity']) ?></td>
+                            <td>
+                                <!-- Remove Button -->
+                                <form method="POST" action="cart.php">
+                                    <input type="hidden" name="cart_id" value="<?= $row['cart_id'] ?>">
+                                    <button type="submit" name="remove_cart" onclick="return confirm('Are you sure you want to remove this item?')">Remove</button>
+                                </form>
+                            </td>
                         </tr>
                     <?php } ?>
                 </tbody>
