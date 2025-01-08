@@ -121,12 +121,12 @@ if ($comments_result && mysqli_num_rows($comments_result) > 0) {
                                 <div class="product-images-column">
 
                                     <?php foreach ($image_rows as $image) { ?>
-                                        <img src="<?=htmlspecialchars($image[0])?>" alt="<?=htmlspecialchars($image[1])?>" />
+                                        <img src="<?=htmlspecialchars($image[0])?>" alt="<?=htmlspecialchars($image[1])?>" onclick="this.requestFullscreen()" />
                                     <?php } ?>
                                 </div>
                                 <div class="primary-product-image">
                                     <?php if (!empty($image_rows)) { ?>
-                                        <img src="<?= htmlspecialchars($image_rows[0][0]) ?>" alt="<?= htmlspecialchars($image_rows[0][1]) ?>" />
+                                        <img src="<?= htmlspecialchars($image_rows[0][0]) ?>" alt="<?= htmlspecialchars($image_rows[0][1]) ?>" onclick="this.requestFullscreen()" />
                                     <?php }?>
                                 </div>
                             </div>

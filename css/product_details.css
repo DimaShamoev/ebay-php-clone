@@ -39,13 +39,14 @@ body {
 }
 
 .primary-product-image img{
+    cursor: pointer;
     width: 700px;
     max-width: 100%;
     height: auto;
     border: solid 1px black;
     border-radius: 30px;
     padding: 10px;
-    
+    transition: 0.2s; 
 }
 
 .product-images-column {
@@ -56,13 +57,16 @@ body {
 }
 
 .product-images-column img {
+    cursor: pointer;
     width: 150px;
     max-width: 100%;
     height: auto;
     border: solid 1px black;
     border-radius: 30px;
     padding: 5px;
+    transition: 0.2s;   
 }
+
 
 .product-info {
     display: flex;
