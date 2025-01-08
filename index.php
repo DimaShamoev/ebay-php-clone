@@ -10,7 +10,6 @@
     <title>MyEbay</title>
 </head>
 <body>
-
     <div class="body-wrapper">
 
         <?php
@@ -161,8 +160,6 @@
         ?>
 
     </div>
-
-
     <script src="./js/index.js"></script>
 </body>
 </html>
