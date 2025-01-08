@@ -165,7 +165,7 @@ if ($comments_result && mysqli_num_rows($comments_result) > 0) {
                                 </div>
                                 <form method="POST" action="product_details.php?product=<?= $product_id ?>" class="comment-form">
                                     <div class="comment-input-block">
-                                        <textarea name="comment" required placeholder="Write your comment here..."></textarea>
+                                        <textarea class="comments-textbox" name="comment" required placeholder="Write your comment here..."></textarea>
                                     </div>
                                     <div class="rating-input-block">
                                         <label for="rating">Rating:</label>
@@ -186,19 +186,25 @@ if ($comments_result && mysqli_num_rows($comments_result) > 0) {
                     </div>
 
                     <div class="comments-block">
-                        <h3>Comments</h3>
-                        <?php if (count($comments) > 0): ?>
-                            <?php foreach ($comments as $comment): ?>
-                                <div class="comment">
-                                    <p><strong><?= htmlspecialchars($comment['user_username']) ?></strong> said:</p>
-                                    <p><?= htmlspecialchars($comment['comment']) ?></p>
-                                    <p class="comment-date">Upload On: <?= htmlspecialchars($comment['created_date']) ?></p>
-                                    <hr>
-                                </div>
-                            <?php endforeach; ?>
-                        <?php else: ?>
+                        <div class="comments-block-title">
+                            <h3>All Comments: </h3>
+                        </div>
+                        <?php if (count($comments) > 0){ ?>
+                            <div class="comments-block-wrapper">
+                                <?php foreach ($comments as $comment) { ?>
+                                    <div class="comment">
+                                        <div class="comment-info">
+                                            <p class="comment-author"><?= htmlspecialchars($comment['user_username']) ?></p>
+                                            <p>•</p>
+                                            <p class="comment-date"><?= htmlspecialchars($comment['created_date']) ?></p>
+                                        </div>
+                                        <p class="comment-txt"><?= htmlspecialchars($comment['comment']) ?></p>
+                                    </div>
+                                <?php } ?>
+                            </div>
+                        <?php } else { ?>
                             <p>No comments yet. Be the first to comment!</p>
-                        <?php endif; ?>
+                        <?php } ?>
                     </div>
 
                 </div>

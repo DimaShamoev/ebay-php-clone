@@ -63,7 +63,6 @@ body {
     border-left: none;
 }
 
-
 .table td button {
     cursor: pointer;
     border: none;
@@ -79,5 +78,18 @@ body {
         background-color: white;
         color: black;
         border-color: black;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .main {
+        padding: 40px 10px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .table th,
+    .table td {
+        font-size: 13px;
     }
 }

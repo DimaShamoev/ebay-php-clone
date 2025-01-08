@@ -38,50 +38,58 @@ $cart_result = mysqli_query($conn, $cart_query);
         <?php include "../components/Header.php"; ?>
 
         <main class="main">
-            <h1>Your Cart</h1>
-            <table class="table">
-                <tr>
-                    <th>Image</th>
-                    <th>Product ID</th>
-                    <th>Product Title</th>
-                    <th>Price</th>
-                    <th>Quantity</th>
-                    <th>Action</th>
-                </tr>
-                    <?php
-                        while ($row = mysqli_fetch_assoc($cart_result)) {
-                            $product_id = $row['product_id'];
+            <div class="container">
 
-                            $product_query = "SELECT product_title, product_price FROM products WHERE product_id = $product_id LIMIT 1";
-                            $product_result = mysqli_query($conn, $product_query);
-                            $product = mysqli_fetch_row($product_result);
+                <div class="main-wrapper">
 
-                            $image_query = "SELECT image_url, image_alt FROM images WHERE product_id = $product_id LIMIT 1";
-                            $image_result = mysqli_query($conn, $image_query);
-                            $image = mysqli_fetch_row($image_result);
-                    ?>
-                        <tr>
-                            <td>
-                                <?php if ($image): ?>
-                                    <img src="<?= htmlspecialchars($image[0]) ?>" alt="<?= htmlspecialchars($image[1]) ?>" width="100" height="100">
-                                <?php else: ?>
-                                    <p>No Image</p>
-                                <?php endif; ?>
-                            </td>
-                            <td><?= htmlspecialchars($product_id) ?></td>
-                            <td><?= htmlspecialchars($product[0]) ?></td>
-                            <td><?= htmlspecialchars($product[1]) ?> $</td>
-                            <td><?= htmlspecialchars($row['quantity']) ?></td>
-                            <td>
-                                <form method="POST" action="cart.php">
-                                    <input type="hidden" name="cart_id" value="<?= $row['cart_id'] ?>">
-                                    <button type="submit" name="remove_cart" onclick="return confirm('Are you sure you want to remove this item?')">Remove</button>
-                                </form>
-                            </td>
-                        </tr>
-                    <?php } ?>
-                </tbody>
-            </table>
+                <h1>Your Cart</h1>
+                <table class="table">
+                    <tr>
+                        <th>Image</th>
+                        <th>Product ID</th>
+                        <th>Product Title</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                        <th>Action</th>
+                    </tr>
+                        <?php
+                            while ($row = mysqli_fetch_assoc($cart_result)) {
+                                $product_id = $row['product_id'];
+
+                                $product_query = "SELECT product_title, product_price FROM products WHERE product_id = $product_id LIMIT 1";
+                                $product_result = mysqli_query($conn, $product_query);
+                                $product = mysqli_fetch_row($product_result);
+
+                                $image_query = "SELECT image_url, image_alt FROM images WHERE product_id = $product_id LIMIT 1";
+                                $image_result = mysqli_query($conn, $image_query);
+                                $image = mysqli_fetch_row($image_result);
+                        ?>
+                            <tr>
+                                <td>
+                                    <?php if ($image): ?>
+                                        <img src="<?= htmlspecialchars($image[0]) ?>" alt="<?= htmlspecialchars($image[1]) ?>" width="100" height="100">
+                                    <?php else: ?>
+                                        <p>No Image</p>
+                                    <?php endif; ?>
+                                </td>
+                                <td><?= htmlspecialchars($product_id) ?></td>
+                                <td><?= htmlspecialchars($product[0]) ?></td>
+                                <td><?= htmlspecialchars($product[1]) ?> $</td>
+                                <td><?= htmlspecialchars($row['quantity']) ?></td>
+                                <td>
+                                    <form method="POST" action="cart.php">
+                                        <input type="hidden" name="cart_id" value="<?= $row['cart_id'] ?>">
+                                        <button type="submit" name="remove_cart" onclick="return confirm('Are you sure you want to remove this item?')">Remove</button>
+                                    </form>
+                                </td>
+                            </tr>
+                        <?php } ?>
+                    </tbody>
+                </table>
+
+                </div>
+
+            </div>
         </main>
 
         <?php include "../components/Footer.php"; ?>
