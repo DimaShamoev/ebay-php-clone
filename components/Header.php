@@ -8,7 +8,7 @@
                             if(isset($_COOKIE['username'])) {
                                 $username = $_COOKIE['username'];
                         ?>
-                            <li>Hello <b><?=$username?></b> | <a href="/ebay-php-clone/auth/log_out.php">Log Out</a></li>
+                            <li>Hello <a class="header-user-name" href="/ebay-php-clone/pages/profile.php"><?=$username?></a> | <a href="/ebay-php-clone/auth/log_out.php">Log Out</a></li>
                         <?php } else { ?>
                             <li><a class="underline-link" href="/ebay-php-clone/pages/sign_in.php">Sign In</a> Or <a class="underline-link" href="/ebay-php-clone/pages/sign_up.php">Sign Up</a></li>
                         <?php } ?>

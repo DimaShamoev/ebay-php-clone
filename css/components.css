@@ -49,6 +49,12 @@
     color: #0654BA !important;
 }
 
+.header-user-name {
+    color: black;
+    -webkit-text-stroke: 0.3px;
+    text-transform: capitalize;
+}
+
 /* Header Bottom */
 .header-bottom {
     border-top: 1px solid #E5E5E5;

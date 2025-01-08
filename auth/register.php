@@ -1,33 +1,41 @@
 <?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
+$first_name = $_POST['first_name'] ?? null;
+$last_name = $_POST['last_name'] ?? null;
+$username = $_POST['username'] ?? null;
+$email = $_POST['email'] ?? null;
+$address = $_POST['address'] ?? null;
+$password = $_POST['password'] ?? null;
 
-    $username = $_POST['username'];
-    $email = $_POST['email'];
-    $password = $_POST['password'];
+if (!$first_name || !$last_name || !$username || !$email || !$address || !$password) {
+    header("Location: ../pages/sign_up.php?error=All fields are required");
+    exit;
+}
 
-    $host = "localhost";
-    $dbUsername = "root";
-    $dbPassword = "";
-    $dbName = "ebay_database";
+$host = "localhost";
+$dbUsername = "root";
+$dbPassword = "";
+$dbName = "ebay_database";
 
-    $conn = mysqli_connect($host, $dbUsername, $dbPassword, $dbName);
+$conn = mysqli_connect($host, $dbUsername, $dbPassword, $dbName);
 
-    if ($conn->connect_error) {
-        die("Connection Failed: " . $conn->connect_error);
-    }
+if ($conn->connect_error) {
+    die("Connection Failed: " . $conn->connect_error);
+}
 
-    $query = "SELECT * FROM users WHERE user_username='$username'";
-    $result = $conn->query($query);
+$query = "SELECT * FROM users WHERE user_username='$username'";
+$result = $conn->query($query);
 
-    if ($result->num_rows == 0) {
-        $insertQuery = "INSERT INTO users (user_username, user_email, user_password, user_type) VALUES ('$username', '$email', '$password', 'user')";
-        if ($conn->query($insertQuery) === TRUE) {
-            setcookie("username", $username, time() + (86400 * 30), "/");
-            header("Location: ../index.php");
-        } else {
-            echo "Error: " . $conn->error;
-        }
+if ($result->num_rows == 0) {
+    $insertQuery = "
+        INSERT INTO users (user_firstname, user_lastname, user_username, user_email, user_password, user_type, user_address, created_date) 
+        VALUES ('$first_name', '$last_name', '$username', '$email', '$password', 'user', '$address', NOW())
+    ";
+    if ($conn->query($insertQuery) === TRUE) {
+        setcookie("username", $username, time() + (86400 * 30), "/");
+        header("Location: ../index.php");
     } else {
-        header("Location: ../pages/sign_up.php?error=Username already exists");
+        echo "Error: " . $conn->error;
     }
+} else {
+    header("Location: ../pages/sign_up.php?error=Username already exists");
 }

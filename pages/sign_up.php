@@ -47,6 +47,9 @@
                         <input name="email" type="text" placeholder="Enter Email">
                     </div>
                     <div class="input-block">
+                        <input name="address" type="text" placeholder="Enter Address">
+                    </div>
+                    <div class="input-block">
                         <input name="password" type="text" placeholder="Enter Password">
                     </div>
                     <div class="input-block">
