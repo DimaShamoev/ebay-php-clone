@@ -25,3 +25,59 @@ body {
     flex: 1;
     padding: 20px 60px 30px 60px;
 }
+
+.table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 20px 0;
+}
+
+.table tr:first-child {
+    background-color: black;
+    color: white;
+}
+
+.table tr:not(.table tr:first-child) {
+    background-color: #F7F7F7;
+}
+
+.table th,
+.table td {
+    border-top: solid 1px black;
+    border-left: solid 1px black;
+    text-align: center;
+}
+
+.table th {
+    padding: 7px 0;
+}
+
+.table td {
+    padding: 5px 0;
+    font-size: 19px;
+    -webkit-text-stroke: 0.3px;
+}
+
+.table th:first-child,
+.table td:first-child {
+    border-left: none;
+}
+
+
+.table td button {
+    cursor: pointer;
+    border: none;
+    background-color: black;
+    color: white;
+    padding: 5px 15px;
+    font-size: 15px;
+    border-radius: 7px;
+    border: solid 1px white;
+    transition: 0.2s;
+
+    &:hover {
+        background-color: white;
+        color: black;
+        border-color: black;
+    }
+}
