@@ -18,8 +18,17 @@
                 </div>
                 <div class="header-top-right-side">
                     <ul>
-                        <li class="header-top-right-side-hidden-link"><a href="#">Sell</a></li>
-                        <li class="header-top-right-side-hidden-link"><a href="#">Watchlist <i class='bx bx-chevron-down'></i></a></li>
+                        <?php
+                            if(isset($_COOKIE['username'])) {
+                                $username = $_COOKIE['username'];
+                        ?>
+                            <li><a href="/ebay-php-clone/pages/sell_product.php">Sell</a></li>
+                            <li><a href="/ebay-php-clone/pages/cart.php">Cart</a></li>
+                        <?php } else { ?>
+                            <li><a href="/ebay-php-clone/pages/sign_in.php">Sell</a></li>
+                            <li><a href="/ebay-php-clone/pages/sign_in.php">Cart</a></li>
+                        <?php } ?>
+                        
                         <li class="header-top-right-side-hidden-link"><a href="#">My eBay <i class='bx bx-chevron-down'></i></a></li>
                         <li><a href="#"><i class='bx bx-bell'></i></a></li>
                         <li><a href="#"><i class='bx bx-cart'></i></a></li>
@@ -33,9 +42,8 @@
             <div class="header-bottom-wrapper">
 
                 <div class="header-bottom-logo">
-                    <a href="#">
-                        <!-- <img height="50" src="images/ebay-logo.svg" alt="Ebay"> -->
-                        <img height="50" src="https://pngimg.com/uploads/ebay/ebay_PNG14.png" alt="Ebay">
+                    <a href="/ebay-php-clone/index.php">
+                        <img height="45" src="/ebay-php-clone/images/ebay-logo.svg" alt="Ebay">
                     </a>
                 </div>
 

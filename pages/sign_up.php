@@ -16,12 +16,12 @@
             <div class="container">
                 <div class="authorization-header-wrapper">
                     <div class="authorization-logo">
-                        <a href="#">
+                        <a href="/ebay-php-clone/index.php">
                             <img src="../images/ebay-logo.svg" alt="" height="50">
                         </a>
                     </div>
                     <div class="authorization-report">
-                        Already have an account? <a href="#">Sign in</a>
+                        Already have an account? <a href="./sign_in.php">Sign in</a>
                     </div>
                 </div>
             </div>

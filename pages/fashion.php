@@ -23,32 +23,32 @@
 
                     <div class="fashion-offers">
                         <div class="fashion-offer">
-                            <a href="#">
+                            <a href="./fashion_shop.php">
                                 <img src="/ebay-php-clone/images/fashion-1.png" alt="">
                             </a>
                         </div>
                         <div class="fashion-offer">
-                            <a href="#">
+                            <a href="./fashion_shop.php">
                                 <img src="/ebay-php-clone/images/fashion-2.png" alt="">
                             </a>
                         </div>
                         <div class="fashion-offer">
-                            <a href="#">
+                            <a href="./fashion_shop.php">
                                 <img src="/ebay-php-clone/images/fashion-3.png" alt="">
                             </a>
                         </div>
                         <div class="fashion-offer">
-                            <a href="#">
+                            <a href="./fashion_shop.php">
                                 <img src="/ebay-php-clone/images/fashion-4.png" alt="">
                             </a>
                         </div>
                         <div class="fashion-offer">
-                            <a href="#">
+                            <a href="./fashion_shop.php">
                                 <img src="/ebay-php-clone/images/fashion-5.png" alt="">
                             </a>
                         </div>
                         <div class="fashion-offer">
-                            <a href="#">
+                            <a href="./fashion_shop.php">
                                 <img src="/ebay-php-clone/images/fashion-6.png" alt="">
                             </a>
                         </div>

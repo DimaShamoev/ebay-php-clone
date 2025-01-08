@@ -54,8 +54,8 @@
                             $category = isset($_GET['category']) ? $_GET['category'] : null;
 
                             $category_map = [
-                                'man' => 7,
-                                'woman' => 8,
+                                'woman' => 7,
+                                'man' => 8,
                                 'kid' => 9,
                             ];
 

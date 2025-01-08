@@ -31,7 +31,7 @@
                             <li><a href="/ebay-php-clone/pages/motors.php">Motors</a></li>
                             <li><a href="/ebay-php-clone/pages/fashion.php">Fashion</a></li>
                             <li><a href="#">Collectibles and Art</a></li>
-                            <li><a href="#">Sports</a></li>
+                            <li><a href="/ebay-php-clone/pages/sport.php">Sports</a></li>
                             <li><a href="#">Health & Beauty</a></li>
                             <li><a href="#">Industrial equipment</a></li>
                             <li><a href="#">Home & Garden</a></li>

@@ -15,7 +15,7 @@
             <div class="container">
                 <div class="authorization-header-wrapper">
                     <div class="authorization-logo">
-                        <a href="#">
+                        <a href="/ebay-php-clone/index.php">
                             <img src="../images/ebay-logo.svg" alt="" height="50">
                         </a>
                     </div>
@@ -34,7 +34,7 @@
                         Sign in to your account
                     </div>
                     <div class="authorization-form-text">
-                        New to eBay? <a href="#">Create account</a>
+                        New to eBay? <a href="./sign_up.php">Create account</a>
                     </div>
                 </div>
                 <div class="authorization-inputs-block">
