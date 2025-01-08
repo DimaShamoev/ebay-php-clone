@@ -36,7 +36,7 @@ body {
     display: flex;
     align-items: center;
     gap: 10px;
-    width: 200px;
+    width: 150px;
     max-width: 100%;
 }
 
@@ -114,4 +114,29 @@ body {
 
 .orders-section table tr:nth-child(odd) {
     background-color: #e7e7e7;
+}
+
+@media screen and (max-width: 850px) {
+    .main {
+        padding: 40px 10px;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .profile-section {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .orders-section {
+        padding: 0;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .orders-table th,
+    .orders-table td {
+        font-size: 10px;
+        padding: 1px;
+    }
 }
