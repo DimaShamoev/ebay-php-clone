@@ -44,30 +44,25 @@ $order_result = mysqli_query($conn, $order_query);
                     <h1>Your Profile</h1>
 
                     <div class="profile-section">
-                        <h2>User Information</h2>
-                        <table class="profile-table">
-                            <tr>
-                                <th>Username:</th>
-                                <td><?= htmlspecialchars($user_info['user_username']) ?></td>
-                            </tr>
-                            <tr>
-                                <th>Email:</th>
-                                <td><?= htmlspecialchars($user_info['user_email']) ?></td>
-                            </tr>
-                            <tr>
-                                <th>Full Name:</th>
-                                <td><?= htmlspecialchars($user_info['user_firstname']) . " " . $user_info['user_lastname']?> </td>
-                            </tr>   
-                            <tr>
-                                <th>Address:</th>
-                                <td><?= htmlspecialchars($user_info['user_address']) ?></td>
-                            </tr>
-                        </table>
-                    </div>
+                        <div class="user-info-block">
+                            <div class="profile-icon-block">
+                                <div class="user-icon">
+                                </div>
+                                <div class="user-info">
+                                    <?= htmlspecialchars($user_info['user_username']) ?>
+                                </div>
+                            </div>
+                            <div class="user-full-info">
+                                <ul>
+                                    <li>FirstName: <?=$user_info['user_firstname']?></li>
+                                    <li>LastName: <?=$user_info['user_lastname']?></li>
+                                    <li>Email: <?=$user_info['user_email']?></li>
+                                    <li>Address: <?=$user_info['user_address']?></li>
+                                </ul>
+                            </div>
+                        </div>
 
-                    <!-- Orders Section -->
-                    <div class="orders-section">
-                        <h2>Your Orders</h2>
+                        <div class="orders-section">
                         <?php if (mysqli_num_rows($order_result) > 0): ?>
                             <table class="orders-table">
                                 <tr>
@@ -93,6 +88,55 @@ $order_result = mysqli_query($conn, $order_query);
                             <p>You have no orders yet.</p>
                         <?php endif; ?>
                     </div>
+
+                        <!-- <table class="profile-table">
+                            <tr>
+                                <th>Username:</th>
+                                <td><?= htmlspecialchars($user_info['user_username']) ?></td>
+                            </tr>
+                            <tr>
+                                <th>Email:</th>
+                                <td><?= htmlspecialchars($user_info['user_email']) ?></td>
+                            </tr>
+                            <tr>
+                                <th>Full Name:</th>
+                                <td><?= htmlspecialchars($user_info['user_firstname']) . " " . $user_info['user_lastname']?> </td>
+                            </tr>   
+                            <tr>
+                                <th>Address:</th>
+                                <td><?= htmlspecialchars($user_info['user_address']) ?></td>
+                            </tr>
+                        </table> -->
+                    </div>
+
+                    <!-- Orders Section -->
+                    <!-- <div class="orders-section">
+                        <h2>Your Orders</h2>
+                        <?php if (mysqli_num_rows($order_result) > 0): ?>
+                            <table class="orders-table">
+                                <tr>
+                                    <th>Order ID</th>
+                                    <th>Product ID</th>
+                                    <th>Status</th>
+                                    <th>Price</th>
+                                    <th>Shipping Address</th>
+                                    <th>Ordered At</th>
+                                </tr>
+                                <?php while ($order = mysqli_fetch_assoc($order_result)): ?>
+                                    <tr>
+                                        <td><?= htmlspecialchars($order['order_id']) ?></td>
+                                        <td><?= htmlspecialchars($order['product_id']) ?></td>
+                                        <td><?= htmlspecialchars($order['order_status']) ?></td>
+                                        <td><?= htmlspecialchars($order['order_price']) ?> $</td>
+                                        <td><?= htmlspecialchars($order['shipping_address']) ?></td>
+                                        <td><?= htmlspecialchars($order['ordered_at']) ?></td>
+                                    </tr>
+                                <?php endwhile; ?>
+                            </table>
+                        <?php else: ?>
+                            <p>You have no orders yet.</p>
+                        <?php endif; ?>
+                    </div> -->
                 </div>
             </div>
         </main>

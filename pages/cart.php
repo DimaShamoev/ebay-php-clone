@@ -120,10 +120,15 @@ $cart_result = mysqli_query($conn, $cart_query);
                         <?php } ?>
                 </table>
 
-                <!-- Buy All Button -->
-                <form method="POST" action="cart.php">
-                    <button type="submit" name="buy_all" class="buy-button">Buy All</button>
-                </form>
+                <?php
+                    if(mysqli_num_rows($cart_result) > 0) {
+                ?>
+
+                    <form method="POST" action="cart.php">
+                        <button type="submit" name="buy_all" class="buy-button">Buy All</button>
+                    </form>
+
+                <?php } ?>
 
                 </div>
 

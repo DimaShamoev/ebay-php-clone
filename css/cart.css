@@ -81,6 +81,26 @@ body {
     }
 }
 
+.buy-button {
+    cursor: pointer;
+    width: 300px;
+    max-width: 100%;
+    padding: 7px 0;
+    font-family: inherit;
+    font-size: 17px;
+    border: solid 1px white;
+    background-color: black;
+    color: white;
+    border-radius: 7px;
+    transition: 0.2s;
+
+    &:hover {
+        border-color: black;
+        background-color: white;
+        color: black;
+    }
+}
+
 @media screen and (max-width: 850px) {
     .main {
         padding: 40px 10px;
