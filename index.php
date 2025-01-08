@@ -166,13 +166,3 @@
     <script src="./js/index.js"></script>
 </body>
 </html>
-
-
-
-<!-- 
-
-To do:
-    1)users type after authorization
-    2)change products names
-    3)add data in DB
- -->

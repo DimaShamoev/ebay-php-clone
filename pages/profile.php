@@ -63,80 +63,32 @@ $order_result = mysqli_query($conn, $order_query);
                         </div>
 
                         <div class="orders-section">
-                        <?php if (mysqli_num_rows($order_result) > 0): ?>
-                            <table class="orders-table">
-                                <tr>
-                                    <th>Order ID</th>
-                                    <th>Product ID</th>
-                                    <th>Status</th>
-                                    <th>Price</th>
-                                    <th>Shipping Address</th>
-                                    <th>Ordered At</th>
-                                </tr>
-                                <?php while ($order = mysqli_fetch_assoc($order_result)): ?>
+                            <?php if (mysqli_num_rows($order_result) > 0): ?>
+                                <table class="orders-table">
                                     <tr>
-                                        <td><?= htmlspecialchars($order['order_id']) ?></td>
-                                        <td><?= htmlspecialchars($order['product_id']) ?></td>
-                                        <td><?= htmlspecialchars($order['order_status']) ?></td>
-                                        <td><?= htmlspecialchars($order['order_price']) ?> $</td>
-                                        <td><?= htmlspecialchars($order['shipping_address']) ?></td>
-                                        <td><?= htmlspecialchars($order['ordered_at']) ?></td>
+                                        <th>Order ID</th>
+                                        <th>Product ID</th>
+                                        <th>Status</th>
+                                        <th>Price</th>
+                                        <th>Shipping Address</th>
+                                        <th>Ordered At</th>
                                     </tr>
-                                <?php endwhile; ?>
-                            </table>
-                        <?php else: ?>
-                            <p>You have no orders yet.</p>
-                        <?php endif; ?>
+                                    <?php while ($order = mysqli_fetch_assoc($order_result)): ?>
+                                        <tr>
+                                            <td><?= htmlspecialchars($order['order_id']) ?></td>
+                                            <td><?= htmlspecialchars($order['product_id']) ?></td>
+                                            <td><?= htmlspecialchars($order['order_status']) ?></td>
+                                            <td><?= htmlspecialchars($order['order_price']) ?> $</td>
+                                            <td><?= htmlspecialchars($order['shipping_address']) ?></td>
+                                            <td><?= htmlspecialchars($order['ordered_at']) ?></td>
+                                        </tr>
+                                    <?php endwhile; ?>
+                                </table>
+                            <?php else: ?>
+                                <p>You have no orders yet.</p>
+                            <?php endif; ?>
+                        </div>
                     </div>
-
-                        <!-- <table class="profile-table">
-                            <tr>
-                                <th>Username:</th>
-                                <td><?= htmlspecialchars($user_info['user_username']) ?></td>
-                            </tr>
-                            <tr>
-                                <th>Email:</th>
-                                <td><?= htmlspecialchars($user_info['user_email']) ?></td>
-                            </tr>
-                            <tr>
-                                <th>Full Name:</th>
-                                <td><?= htmlspecialchars($user_info['user_firstname']) . " " . $user_info['user_lastname']?> </td>
-                            </tr>   
-                            <tr>
-                                <th>Address:</th>
-                                <td><?= htmlspecialchars($user_info['user_address']) ?></td>
-                            </tr>
-                        </table> -->
-                    </div>
-
-                    <!-- Orders Section -->
-                    <!-- <div class="orders-section">
-                        <h2>Your Orders</h2>
-                        <?php if (mysqli_num_rows($order_result) > 0): ?>
-                            <table class="orders-table">
-                                <tr>
-                                    <th>Order ID</th>
-                                    <th>Product ID</th>
-                                    <th>Status</th>
-                                    <th>Price</th>
-                                    <th>Shipping Address</th>
-                                    <th>Ordered At</th>
-                                </tr>
-                                <?php while ($order = mysqli_fetch_assoc($order_result)): ?>
-                                    <tr>
-                                        <td><?= htmlspecialchars($order['order_id']) ?></td>
-                                        <td><?= htmlspecialchars($order['product_id']) ?></td>
-                                        <td><?= htmlspecialchars($order['order_status']) ?></td>
-                                        <td><?= htmlspecialchars($order['order_price']) ?> $</td>
-                                        <td><?= htmlspecialchars($order['shipping_address']) ?></td>
-                                        <td><?= htmlspecialchars($order['ordered_at']) ?></td>
-                                    </tr>
-                                <?php endwhile; ?>
-                            </table>
-                        <?php else: ?>
-                            <p>You have no orders yet.</p>
-                        <?php endif; ?>
-                    </div> -->
                 </div>
             </div>
         </main>

@@ -17,7 +17,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $userRow = $userResult->fetch_assoc();
     $user_id = $userRow['user_id'];
 
-    // Insert product
     $category_id = $_POST['category_id'];
     $product_title = $_POST['product_title'];
     $product_description = $_POST['product_description'];

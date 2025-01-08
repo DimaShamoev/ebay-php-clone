@@ -44,7 +44,6 @@ if (isset($_POST['buy_all'])) {
         mysqli_query($conn, $order_query);
     }
 
-    // Clear the cart after buying
     $clear_cart_query = "DELETE FROM carts WHERE user_id = $user_id";
     mysqli_query($conn, $clear_cart_query);
 

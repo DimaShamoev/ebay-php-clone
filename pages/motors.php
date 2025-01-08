@@ -76,7 +76,6 @@
                             $arr = mysqli_fetch_all($result);
 
                             foreach($arr as $elem) {
-                                // Fetch the username for the user related to the product
                                 $user_query = "SELECT user_username FROM users WHERE user_id = $elem[1]";
                                 $user_result = mysqli_query($conn, $user_query);
                                 $user_row = mysqli_fetch_row($user_result);
