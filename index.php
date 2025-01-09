@@ -11,7 +11,6 @@
 </head>
 <body>
     <div class="body-wrapper">
-
         <?php
             include "./components/Header.php"
         ?>
@@ -158,7 +157,6 @@
         <?php
             include "./components/Footer.php"
         ?>
-
     </div>
     <script src="./js/index.js"></script>
 </body>
