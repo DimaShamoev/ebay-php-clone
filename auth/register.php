@@ -11,16 +11,11 @@ if (!$first_name || !$last_name || !$username || !$email || !$address || !$passw
     exit;
 }
 
-$host = "localhost";
-$dbUsername = "root";
-$dbPassword = "";
-$dbName = "ebay_database";
 
-$conn = mysqli_connect($host, $dbUsername, $dbPassword, $dbName);
+// include "/ebay-php-clone/connection/database_connection.php";
 
-if ($conn->connect_error) {
-    die("Connection Failed: " . $conn->connect_error);
-}
+$conn = mysqli_connect("localhost", "root", "", "ebay_database");
+
 
 $query = "SELECT * FROM users WHERE user_username='$username'";
 $result = $conn->query($query);
