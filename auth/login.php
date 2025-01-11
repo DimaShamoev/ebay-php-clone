@@ -7,9 +7,6 @@ if (!$username || !$password) {
     exit;
 }
 
-
-// include "/ebay-php-clone/connection/database_connection.php";
-
 $conn = mysqli_connect("localhost", "root", "", "ebay_database");
 
 if (!$conn) {
