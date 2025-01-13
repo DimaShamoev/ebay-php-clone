@@ -43,7 +43,7 @@ body {
     width: 700px;
     max-width: 100%;
     height: auto;
-    border: solid 1px black;
+    border: solid 2px lightgray;
     border-radius: 30px;
     padding: 10px;
     transition: 0.2s; 
@@ -61,7 +61,7 @@ body {
     width: 150px;
     max-width: 100%;
     height: auto;
-    border: solid 1px black;
+    border: solid 2px lightgray;
     border-radius: 30px;
     padding: 5px;
     transition: 0.2s;   
@@ -147,7 +147,7 @@ body {
     height: 100px;
     outline: none;
     padding: 10px;
-    border: solid 1px black;
+    border: solid 2px lightgray;
     font-family: inherit;
     font-size: 17px;
 }
