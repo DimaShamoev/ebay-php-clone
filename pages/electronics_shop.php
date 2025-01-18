@@ -16,27 +16,21 @@
         <?php include "../components/Header.php" ?>
 
         <main class="main">
-            <div class="container">
-
-                <div class="sort-by-controllers-block"></div>
-
-            </div>
-
                 <div class="shop-body">
 
                     <div class="shop-filter">
-                    <ul>
-                        <li><b>Type</b></li>
-                        <li><a href="?category=mobiles">Mobiles</a></li>
-                        <li><a href="?category=pcs">PCs</a></li>
-                        <li><a href="?category=accessories">Accessories</a></li>
-                        <li><a href="?category=consoles">Consoles</a></li>
-                        <li><a href="?category=headsets">Headsets</a></li>
-                        <li><a href="?category=smartwatches">Smartwatches</a></li>
-                    </ul>
+                        <ul>
+                            <li><b>Type</b></li>
+                            <li><a href="?category=mobiles">Mobiles</a></li>
+                            <li><a href="?category=pcs">PCs</a></li>
+                            <li><a href="?category=accessories">Accessories</a></li>
+                            <li><a href="?category=consoles">Consoles</a></li>
+                            <li><a href="?category=headsets">Headsets</a></li>
+                            <li><a href="?category=smartwatches">Smartwatches</a></li>
+                        </ul>
 
                         <div class="shop-filter-dashed-line"></div>
-
+                        
                         <ul>
                             <li><b>Price</b></li>
                             <li><a href="#">0$ - 100$</a></li>
@@ -44,14 +38,10 @@
                             <li><a href="#">250$ - 500$</a></li>
                             <li><a href="#">500$</a></li>
                         </ul>
-
                     </div>
 
-
                     <div class="shop-products">
-
-
-                    <?php
+                        <?php
                             include "../connection/database_connection.php";
 
                             $category = isset($_GET['category']) ? $_GET['category'] : null;
@@ -104,13 +94,8 @@
 
                 </div>
             </div>
-
-
         </main>
-
         <?php include "../components/Footer.php" ?>
-
     </div>
-
 </body>
 </html>

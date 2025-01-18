@@ -13,20 +13,23 @@ if (!$first_name || !$last_name || !$username || !$email || !$address || !$passw
 
 $conn = mysqli_connect("localhost", "root", "", "ebay_database");
 
-$query = "SELECT * FROM users WHERE user_username='$username'";
-$result = $conn->query($query);
+if (!$conn) die("Connection failed: " . mysqli_connect_error());
 
-if ($result->num_rows == 0) {
-    $insertQuery = "
-        INSERT INTO users (user_firstname, user_lastname, user_username, user_email, user_password, user_type, user_address, created_date) 
-        VALUES ('$first_name', '$last_name', '$username', '$email', '$password', 'user', '$address', NOW())
-    ";
-    if ($conn->query($insertQuery) === TRUE) {
-        setcookie("username", $username, time() + (86400 * 30), "/");
+$result = mysqli_query($conn, "SELECT * FROM users WHERE user_username='$username'");
+
+if (mysqli_num_rows($result) == 0) {
+    $query = "INSERT INTO users (user_firstname, user_lastname, user_username, user_email, user_password, user_type, user_address, created_date) 
+              VALUES ('$first_name', '$last_name', '$username', '$email', '$password', 'user', '$address', NOW())";
+    
+    if (mysqli_query($conn, $query)) {
+        setcookie("username", $username, time() + 86400 * 30, "/");
         header("Location: ../index.php");
     } else {
-        echo "Error: " . $conn->error;
+        echo "Error: " . mysqli_error($conn);
     }
 } else {
     header("Location: ../pages/sign_up.php?error=Username already exists");
 }
+
+mysqli_close($conn);
+?>

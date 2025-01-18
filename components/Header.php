@@ -19,6 +19,20 @@
                 <div class="header-top-right-side">
                     <ul>
                         <?php
+                            include $_SERVER['DOCUMENT_ROOT'] . "/ebay-php-clone/connection/database_connection.php";
+
+                            if (isset($_COOKIE['username'])) {
+                                $user = $_COOKIE['username'];
+                                $result = mysqli_query($conn, "SELECT user_type FROM users WHERE user_username = '$user'");
+
+                                if ($result && mysqli_num_rows($result) > 0) {
+                                    $userType = mysqli_fetch_assoc($result)['user_type'];
+                                    if ($userType === 'admin') {
+                        ?>
+                            <li><a href="/ebay-php-clone/admin/admin_interface.php">Admin</a></li>
+                        <?php }}}?>
+
+                        <?php
                             if(isset($_COOKIE['username'])) {
                                 $username = $_COOKIE['username'];
                         ?>
@@ -30,8 +44,8 @@
                         <?php } ?>
                         
                         <li class="header-top-right-side-hidden-link"><a href="#">My eBay <i class='bx bx-chevron-down'></i></a></li>
-                        <li><a href="#"><i class='bx bx-bell'></i></a></li>
-                        <li><a href="#"><i class='bx bx-cart'></i></a></li>
+                        <li class="header-top-right-side-icon"><a href="#"><i class='bx bx-bell'></i></a></li>
+                        <li class="header-top-right-side-icon"><a href="#"><i class='bx bx-cart'></i></a></li>
                     </ul>
                 </div>
             </div>

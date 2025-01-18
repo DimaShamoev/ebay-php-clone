@@ -1,0 +1,87 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Market Sans", Arial, sans-serif;
+}
+
+.body-wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container {
+    width: 1550px;
+    max-width: 100%;
+    margin: auto;
+}
+
+.main {
+    flex: 1;
+    padding: 20px 60px 30px 60px;
+}
+
+.table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 20px 0;
+}
+
+table tr:first-child {
+    background-color: #333;
+}
+
+.table tr:nth-child(odd):not(table tr:first-child) {
+    background-color: rgb(222, 222, 222);
+}
+
+.table th {
+    color: white;
+}
+
+.table th,
+.table td {
+    border: solid 2px black;
+    padding: 5px;
+}
+
+.table td:nth-child(5),
+.table td:last-child {
+    text-align: center;
+}
+
+.table td a {
+    color: black;
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+
+@media screen and (max-width: 850px) {
+    .main {
+        padding: 20px 10px;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .table th, 
+    .table td {
+        font-size: 12px;
+    }
+
+}
+
+@media screen and (max-width: 400px) {
+    .table th, 
+    .table td {
+        font-size: 10px;
+    }
+}

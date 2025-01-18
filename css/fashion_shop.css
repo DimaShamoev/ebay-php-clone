@@ -136,7 +136,9 @@ body {
     }
 
     .shop-products {
-        height: 100px;
+        height: 100%;
+        grid-template-columns: repeat(auto-fit, minmax(100px, 200px));
+        justify-content: center;
     }
 
 }
