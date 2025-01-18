@@ -23,7 +23,7 @@ body {
 }
 
 /* main */
-main {
+.main {
     flex: 1;
 }
 

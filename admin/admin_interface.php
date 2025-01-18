@@ -43,7 +43,7 @@
                                     <td> <?= $row['product_title'] ?> </td>
                                     <td><?= $row['product_id'] ?></td>
                                     <td><?= $row['stock_quantity'] ?></td>
-                                    <td><?= $row['product_price'] ?></td>
+                                    <td>$<?= $row['product_price'] ?></td>
                                     <td><a href="admin_logic.php?action=delete&id=<?= $row['product_id'] ?>">Delete</a></td>
                                     <td><a href="admin_logic.php?action=edit&id=<?= $row['product_id'] ?>">Edit</a></td>
                                 </tr>
