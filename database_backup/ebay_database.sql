@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 11, 2025 at 06:15 PM
+-- Generation Time: Jan 18, 2025 at 10:53 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -41,7 +41,8 @@ CREATE TABLE `carts` (
 
 INSERT INTO `carts` (`cart_id`, `user_id`, `product_id`, `quantity`, `created_date`) VALUES
 (9, 5, 16, 1, '2025-01-08 11:12:24'),
-(10, 5, 21, 1, '2025-01-08 11:12:58');
+(10, 5, 21, 1, '2025-01-08 11:12:58'),
+(38, 2, 15, 1, '2025-01-15 08:32:44');
 
 -- --------------------------------------------------------
 
@@ -94,7 +95,8 @@ CREATE TABLE `feedbacks` (
 --
 
 INSERT INTO `feedbacks` (`feedback_id`, `user_id`, `product_id`, `rating`, `comment`, `created_date`) VALUES
-(19, 5, 16, 5, 'lorem ipsums', '2025-01-08 11:12:39');
+(19, 5, 16, 5, 'lorem ipsums', '2025-01-08 11:12:39'),
+(20, 2, 26, 5, 'very very cool', '2025-01-12 18:57:53');
 
 -- --------------------------------------------------------
 
@@ -183,7 +185,8 @@ INSERT INTO `images` (`image_id`, `product_id`, `image_url`, `image_alt`, `is_pr
 (83, 44, '../Images/motor-fashion-7-1.jpg', 'motor-fashion-7-1.jpg', 0),
 (84, 44, '../Images/motor-fashion-7-2.jpg', 'motor-fashion-7-2.jpg', 0),
 (85, 45, '../Images/motor-fashion-4-1.jpg', 'motor-fashion-4-1.jpg', 0),
-(86, 45, '../Images/motor-fashion-4-2.jpg', 'motor-fashion-4-2.jpg', 0);
+(86, 45, '../Images/motor-fashion-4-2.jpg', 'motor-fashion-4-2.jpg', 0),
+(89, 48, '../Images/download.jfif', 'download.jfif', 0);
 
 -- --------------------------------------------------------
 
@@ -218,7 +221,9 @@ INSERT INTO `orders` (`order_id`, `user_id`, `product_id`, `order_status`, `orde
 (24, 11, 20, 'Pending', 125.00, 'City7,street7', '2025-01-09 07:29:16'),
 (25, 11, 38, 'Pending', 200.00, 'City7,street7', '2025-01-09 07:29:16'),
 (26, 11, 41, 'Pending', 50.00, 'City7,street7', '2025-01-09 07:29:16'),
-(27, 8, 20, 'Pending', 125.00, 'City4,street4', '2025-01-11 16:52:07');
+(27, 8, 20, 'Pending', 125.00, 'City4,street4', '2025-01-11 16:52:07'),
+(28, 2, 26, 'Pending', 10.00, 'GE', '2025-01-12 18:58:34'),
+(29, 2, 23, 'Pending', 499.00, 'GE', '2025-01-12 18:58:34');
 
 -- --------------------------------------------------------
 
@@ -242,7 +247,7 @@ CREATE TABLE `products` (
 --
 
 INSERT INTO `products` (`product_id`, `user_id`, `category_id`, `product_title`, `product_description`, `product_price`, `stock_quantity`, `created_at`) VALUES
-(15, 5, 1, 'Iphone | mobile', 'used phone', 499.00, 1, '2025-01-04 04:11:34'),
+(15, 5, 1, 'Iphone | mobile', 'used phone', 499.00, 3, '2025-01-04 04:11:34'),
 (16, 6, 1, 'Google Pixel', 'phone in good condition', 345.00, 1, '2025-01-04 04:14:13'),
 (17, 6, 12, 'Sport Shoes', 'good shoes for sport', 99.00, 1, '2025-01-04 04:15:10'),
 (18, 7, 1, 'phone | Nothing Phone', 'new phone, not opened', 199.00, 1, '2025-01-04 04:16:47'),
@@ -272,7 +277,8 @@ INSERT INTO `products` (`product_id`, `user_id`, `category_id`, `product_title`,
 (42, 13, 11, 'Universal Gym equipment', 'Gym equipment for full body training', 790.00, 3, '2025-01-04 04:49:34'),
 (43, 14, 7, 'women bluse', 'new woman bluse', 45.00, 2, '2025-01-04 04:50:41'),
 (44, 14, 9, 'Kid cloth', 'blue kid cloth, sonic', 30.00, 3, '2025-01-04 04:51:13'),
-(45, 14, 8, 'Dark Gray Man Cloth', 'dark gray man cloth', 60.00, 2, '2025-01-04 04:51:47');
+(45, 14, 8, 'Dark Gray Man Cloth', 'dark gray man cloth', 60.00, 2, '2025-01-04 04:51:47'),
+(48, 19, 1, 'second hand mobile', '64GB, 4gb ram, Black ', 80.00, 1, '2025-01-18 06:49:37');
 
 -- --------------------------------------------------------
 
@@ -322,7 +328,9 @@ INSERT INTO `users` (`user_id`, `user_firstname`, `user_lastname`, `user_usernam
 (14, 'user10', 'usr10', 'user10', 'user10@gmail.com', '1234', 'user', 'City10,street10', '2025-01-04 07:50:02'),
 (15, 'testUser', 'tester', 'teste001', 'test@gmail.com', '1234', 'user', 'Test City', '2025-01-08 12:56:04'),
 (16, 'test2', 'test2', 'test2', 'tes2@test.com', '1234', 'user', 'test city, test', '2025-01-11 17:01:40'),
-(17, 'teest3', 'teest3', 'tessst3', 'test3@test.com', '1234', 'user', 'test country, test city', '2025-01-11 17:04:34');
+(17, 'teest3', 'teest3', 'tessst3', 'test3@test.com', '1234', 'user', 'test country, test city', '2025-01-11 17:04:34'),
+(18, 'newTest', 'newTest', 'newTest', 'newTest@gmail.com', '1234', 'user', 'test world', '2025-01-18 09:44:45'),
+(19, 'newTest2', 'newTest2', 'newTest2', 'newTest2@gmail.com', '1234', 'user', 'test world', '2025-01-18 09:46:28');
 
 --
 -- Indexes for dumped tables
@@ -396,7 +404,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `carts`
 --
 ALTER TABLE `carts`
-  MODIFY `cart_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
+  MODIFY `cart_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
 
 --
 -- AUTO_INCREMENT for table `categorys`
@@ -408,25 +416,25 @@ ALTER TABLE `categorys`
 -- AUTO_INCREMENT for table `feedbacks`
 --
 ALTER TABLE `feedbacks`
-  MODIFY `feedback_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `feedback_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- AUTO_INCREMENT for table `images`
 --
 ALTER TABLE `images`
-  MODIFY `image_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=88;
+  MODIFY `image_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=90;
 
 --
 -- AUTO_INCREMENT for table `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `order_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
+  MODIFY `order_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
 
 --
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
-  MODIFY `product_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=47;
+  MODIFY `product_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=49;
 
 --
 -- AUTO_INCREMENT for table `saved`
@@ -438,7 +446,7 @@ ALTER TABLE `saved`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- Constraints for dumped tables
